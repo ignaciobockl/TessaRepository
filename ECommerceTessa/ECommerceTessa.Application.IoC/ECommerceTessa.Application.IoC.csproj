@@ -9,4 +9,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerceTessa.Service.Implementation\ECommerceTessa.Service.Implementation.csproj" />
+    <ProjectReference Include="..\ECommerceTessa.Service.Interface\ECommerceTessa.Service.Interface.csproj" />
+  </ItemGroup>
+
 </Project>

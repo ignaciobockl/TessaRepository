@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ECommerceTessa.Domain.Entities;
+using ECommerceTessa.Domain.MetaData;
 
 namespace ECommerceTessa.Infraestructure
 {
@@ -31,5 +33,35 @@ namespace ECommerceTessa.Infraestructure
 
             return base.SaveChangesAsync();
         }
+
+
+        //Creating Model
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            var cascadeFks = modelBuilder.Model
+                .GetEntityTypes()
+                .SelectMany(t => t.GetForeignKeys())
+                .Where(fk => fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            foreach (var fk in cascadeFks)
+            {
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+
+
+            //Province
+            modelBuilder.Entity<Province>()
+                .HasMany(x=>x.Locations)
+                .WithOne(y=>y.Province)
+                .HasConstraintName("FK_Province_Locations");
+
+
+
+
+            //Entity Configuration
+            modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
+        }
+
+        public DbSet<Province> Provinces { get; set; }
     }
 }

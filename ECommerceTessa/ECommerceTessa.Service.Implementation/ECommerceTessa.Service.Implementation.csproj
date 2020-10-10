@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerceTessa.Domain\ECommerceTessa.Domain.csproj" />
+    <ProjectReference Include="..\ECommerceTessa.Infraestructure\ECommerceTessa.Infraestructure.csproj" />
+    <ProjectReference Include="..\ECommerceTessa.Service.Interface\ECommerceTessa.Service.Interface.csproj" />
+  </ItemGroup>
+
 </Project>
