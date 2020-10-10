@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "l/1aYRQiEPOEJEcRn8ajKg84vTr94sy9G+SGaqmibECLN98O6jg4Zn4UjIWkFY/jjV3mFiClG0J21X6+tGakkw==",
+  "dgSpecHash": "gOy0s5IvPzLDX/WFhqMI/DLA37YDWEy9rWzcmqUjHwm5VpvNwpbRsOsGKCPbjU46I1U5qh6m5xvy7jXssKNuqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.IoC\\ECommerceTessa.Application.IoC.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\herma\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512"
+  ],
   "logs": []
 }
