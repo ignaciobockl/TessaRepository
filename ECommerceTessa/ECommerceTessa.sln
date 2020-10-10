@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{21609750-8B1E-4AEA-A9C1-60F83B21894F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{78705CC8-0033-431E-8C75-ACE8E865F44A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{4F62CC54-276C-4062-A0DF-099913F15FD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{7DCB24B8-0C34-4586-9CB5-66086007D0E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infraestructure", "5 - Infraestructure", "{A95E4A83-7226-48A3-B4CC-FF34ECD62F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Infraestructure", "ECommerceTessa.Infraestructure\ECommerceTessa.Infraestructure.csproj", "{BF9686CF-95E1-4A06-BE3C-21E14398A319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Domain", "ECommerceTessa.Domain\ECommerceTessa.Domain.csproj", "{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Interface", "3.1 - Interface", "{6C0743C1-E3ED-4401-946F-744F5A8908DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - Implementation", "3.2 - Implementation", "{9E335240-B849-4B97-8FA7-20D88B5CB86B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Connection", "2.1 - Connection", "{F0C320A1-B542-4716-B94B-628923FC5ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.Connection", "ECommerceTessa.Application.Connection\ECommerceTessa.Application.Connection.csproj", "{3BF47D3D-C468-473A-ABC0-ED6449E1D232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Service.Interface", "ECommerceTessa.Service.Interface\ECommerceTessa.Service.Interface.csproj", "{972120C3-10F6-4294-A084-182305AF5303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Service.Implementation", "ECommerceTessa.Service.Implementation\ECommerceTessa.Service.Implementation.csproj", "{B787D4E9-858E-452D-8243-A77AB6BE9DF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - Api", "2.2 - Api", "{EE8D6403-EA4F-42D5-BB41-6C1467160363}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3 - IoC", "2.3 - IoC", "{0705DC1D-5B35-4755-A58A-E49F93D12E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.IoC", "ECommerceTessa.Application.IoC\ECommerceTessa.Application.IoC.csproj", "{B48AABF3-216F-4DBC-AC33-E57A24D94702}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.4 - Helpers", "2.4 - Helpers", "{A802E9C4-C5C2-4424-8880-03644BD92E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.Helpers", "ECommerceTessa.Application.Helpers\ECommerceTessa.Application.Helpers.csproj", "{75338814-D88D-4844-B1CF-BE81CBF11410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF9686CF-95E1-4A06-BE3C-21E14398A319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9686CF-95E1-4A06-BE3C-21E14398A319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9686CF-95E1-4A06-BE3C-21E14398A319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9686CF-95E1-4A06-BE3C-21E14398A319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF47D3D-C468-473A-ABC0-ED6449E1D232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF47D3D-C468-473A-ABC0-ED6449E1D232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF47D3D-C468-473A-ABC0-ED6449E1D232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF47D3D-C468-473A-ABC0-ED6449E1D232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972120C3-10F6-4294-A084-182305AF5303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972120C3-10F6-4294-A084-182305AF5303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972120C3-10F6-4294-A084-182305AF5303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972120C3-10F6-4294-A084-182305AF5303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B787D4E9-858E-452D-8243-A77AB6BE9DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B787D4E9-858E-452D-8243-A77AB6BE9DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B787D4E9-858E-452D-8243-A77AB6BE9DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B787D4E9-858E-452D-8243-A77AB6BE9DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48AABF3-216F-4DBC-AC33-E57A24D94702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48AABF3-216F-4DBC-AC33-E57A24D94702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48AABF3-216F-4DBC-AC33-E57A24D94702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48AABF3-216F-4DBC-AC33-E57A24D94702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75338814-D88D-4844-B1CF-BE81CBF11410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75338814-D88D-4844-B1CF-BE81CBF11410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75338814-D88D-4844-B1CF-BE81CBF11410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75338814-D88D-4844-B1CF-BE81CBF11410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF9686CF-95E1-4A06-BE3C-21E14398A319} = {A95E4A83-7226-48A3-B4CC-FF34ECD62F5F}
+		{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8} = {7DCB24B8-0C34-4586-9CB5-66086007D0E9}
+		{6C0743C1-E3ED-4401-946F-744F5A8908DF} = {4F62CC54-276C-4062-A0DF-099913F15FD1}
+		{9E335240-B849-4B97-8FA7-20D88B5CB86B} = {4F62CC54-276C-4062-A0DF-099913F15FD1}
+		{F0C320A1-B542-4716-B94B-628923FC5ACA} = {78705CC8-0033-431E-8C75-ACE8E865F44A}
+		{3BF47D3D-C468-473A-ABC0-ED6449E1D232} = {F0C320A1-B542-4716-B94B-628923FC5ACA}
+		{972120C3-10F6-4294-A084-182305AF5303} = {6C0743C1-E3ED-4401-946F-744F5A8908DF}
+		{B787D4E9-858E-452D-8243-A77AB6BE9DF0} = {9E335240-B849-4B97-8FA7-20D88B5CB86B}
+		{EE8D6403-EA4F-42D5-BB41-6C1467160363} = {78705CC8-0033-431E-8C75-ACE8E865F44A}
+		{0705DC1D-5B35-4755-A58A-E49F93D12E9A} = {78705CC8-0033-431E-8C75-ACE8E865F44A}
+		{B48AABF3-216F-4DBC-AC33-E57A24D94702} = {0705DC1D-5B35-4755-A58A-E49F93D12E9A}
+		{A802E9C4-C5C2-4424-8880-03644BD92E2E} = {78705CC8-0033-431E-8C75-ACE8E865F44A}
+		{75338814-D88D-4844-B1CF-BE81CBF11410} = {A802E9C4-C5C2-4424-8880-03644BD92E2E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA79281E-D558-4EE8-AC61-43D24F35103C}
+	EndGlobalSection
+EndGlobal
