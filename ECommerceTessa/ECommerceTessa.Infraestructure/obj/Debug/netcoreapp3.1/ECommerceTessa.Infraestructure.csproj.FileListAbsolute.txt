@@ -1,0 +1,5 @@
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.deps.json
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.dll
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.csprojAssemblyReference.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.AssemblyInfo.cs
