@@ -48,6 +48,12 @@ namespace ECommerceTessa.Infraestructure
                 fk.DeleteBehavior = DeleteBehavior.Restrict;
             }
 
+            //Location
+            modelBuilder.Entity<Location>()
+                .HasOne(x => x.Province)
+                .WithMany(y => y.Locations)
+                .HasForeignKey(z=>z.ProvinceId)
+                .HasConstraintName("FK_Locations_Province");
 
             //Province
             modelBuilder.Entity<Province>()
@@ -59,9 +65,12 @@ namespace ECommerceTessa.Infraestructure
 
 
             //Entity Configuration
+            modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
+
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
         }
 
+        public DbSet<Location> Locations { get; set; }
         public DbSet<Province> Provinces { get; set; }
     }
 }
