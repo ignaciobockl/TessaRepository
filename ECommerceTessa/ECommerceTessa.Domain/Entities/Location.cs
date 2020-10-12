@@ -22,8 +22,8 @@ namespace ECommerceTessa.Domain.Entities
 
         public long ProvinceId { get; set; }
 
-        //NAVIGATION PROPERTIES
 
+        //NAVIGATION PROPERTIES
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual Province Province { get; set; }
     }

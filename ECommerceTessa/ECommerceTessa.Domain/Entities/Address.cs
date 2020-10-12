@@ -31,5 +31,7 @@ namespace ECommerceTessa.Domain.Entities
 
         //NAVIGATION PROPERTIES
         public virtual Location Location { get; set; }
+
+        public virtual Person Person { get; set; }
     }
 }

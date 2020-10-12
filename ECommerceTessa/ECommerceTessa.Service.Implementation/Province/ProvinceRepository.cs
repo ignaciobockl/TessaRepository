@@ -97,9 +97,6 @@ namespace ECommerceTessa.Service.Implementation.Province
                 }
                 else
                 {
-
-                }
-                {
                     if (updateProvince.ErasedState == true)
                     {
                         throw new Exception("The Province is eliminated");
