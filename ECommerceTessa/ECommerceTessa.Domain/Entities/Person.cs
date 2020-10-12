@@ -21,5 +21,7 @@ namespace ECommerceTessa.Domain.Entities
 
         //NAVIGATION PROPERTIES
         public virtual ICollection<Address> Addresses { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
     }
 }

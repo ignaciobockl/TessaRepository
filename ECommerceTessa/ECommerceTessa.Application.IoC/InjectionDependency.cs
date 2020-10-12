@@ -7,9 +7,11 @@ using System.Text;
 using ECommerceTessa.Service.Implementation.Address;
 using ECommerceTessa.Service.Implementation.Location;
 using ECommerceTessa.Service.Implementation.Person;
+using ECommerceTessa.Service.Implementation.User;
 using ECommerceTessa.Service.Interface.Address;
 using ECommerceTessa.Service.Interface.Location;
 using ECommerceTessa.Service.Interface.Person;
+using ECommerceTessa.Service.Interface.User;
 
 namespace ECommerceTessa.Application.IoC
 {
@@ -35,6 +37,7 @@ namespace ECommerceTessa.Application.IoC
             service.AddTransient<ILocationRepository, LocationRepository>();
             service.AddTransient<IPersonRepository, PersonRepository>();
             service.AddTransient<IProvinceRepository, ProvinceRepository>();
+            service.AddTransient<IUserRepository, UserRepository>();
         }
     }
 }

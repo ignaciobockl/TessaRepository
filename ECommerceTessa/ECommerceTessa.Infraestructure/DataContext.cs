@@ -74,11 +74,20 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Addresses)
                 .WithOne(y => y.Person);
 
+            modelBuilder.Entity<Person>()
+                .HasMany(x => x.Users)
+                .WithOne(y => y.Person);
+
             //Province
             modelBuilder.Entity<Province>()
                 .HasMany(x => x.Locations)
                 .WithOne(y => y.Province);
 
+            //User
+            modelBuilder.Entity<User>()
+                .HasOne(x => x.Person)
+                .WithMany(y => y.Users)
+                .HasForeignKey(z => z.PersonId);
 
 
 
@@ -90,11 +99,14 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
 
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
+
+            modelBuilder.ApplyConfiguration<User>(new UserMetaData());
         }
 
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Province> Provinces { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
