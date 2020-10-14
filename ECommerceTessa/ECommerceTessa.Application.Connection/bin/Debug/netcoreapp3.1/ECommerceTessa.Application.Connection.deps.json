@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ECommerceTessa.Application.Connection/1.0.0": {
+        "runtime": {
+          "ECommerceTessa.Application.Connection.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ECommerceTessa.Application.Connection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

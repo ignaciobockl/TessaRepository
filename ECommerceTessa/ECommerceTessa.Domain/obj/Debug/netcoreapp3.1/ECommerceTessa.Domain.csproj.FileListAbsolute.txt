@@ -3,3 +3,10 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.csprojAssemblyReference.cache
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.AssemblyInfoInputs.cache
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.AssemblyInfo.cs
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.dll
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.runtimeconfig.json
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.runtimeconfig.dev.json
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.csproj.CoreCompileInputs.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Domain\obj\Debug\netcoreapp3.1\ECommerceTessa.Domain.genruntimeconfig.cache

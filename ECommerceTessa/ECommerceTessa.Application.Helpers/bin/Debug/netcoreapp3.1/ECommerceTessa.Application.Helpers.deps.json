@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ECommerceTessa.Application.Helpers/1.0.0": {
+        "runtime": {
+          "ECommerceTessa.Application.Helpers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ECommerceTessa.Application.Helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

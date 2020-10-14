@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ECommerceTessa.Domain.Entities;
 using ECommerceTessa.Domain.MetaData;
+using static ECommerceTessa.Application.Connection.ConnectionSqlServer;
 
 namespace ECommerceTessa.Infraestructure
 {
@@ -15,7 +16,7 @@ namespace ECommerceTessa.Infraestructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //Configure SQL Server Connection
-            //optionsBuilder.UseSqlServer(GetWINDOWSConnectionString);
+            optionsBuilder.UseSqlServer(GetWINDOWSConnectionString);
 
             base.OnConfiguring(optionsBuilder);
         }
@@ -59,6 +60,14 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Addresses)
                 .HasForeignKey(z => z.PersonId);
 
+            //Client 
+            //Corroborar
+            modelBuilder.Entity<Client>()
+                .HasOne(x => x.Person)
+                .WithOne(y => y.Client)
+                .HasPrincipalKey<Person>(p => p.Id)
+                .HasForeignKey<Client>(c => c.PersonId);
+
             //Location
             modelBuilder.Entity<Location>()
                 .HasOne(x => x.Province)
@@ -72,11 +81,17 @@ namespace ECommerceTessa.Infraestructure
             //Person
             modelBuilder.Entity<Person>()
                 .HasMany(x => x.Addresses)
-                .WithOne(y => y.Person);
+                .WithOne(y => y.Person)
+                .IsRequired(false); //Relacion opcional (0.1 a *)
 
             modelBuilder.Entity<Person>()
                 .HasMany(x => x.Users)
                 .WithOne(y => y.Person);
+            //Corroborar
+            modelBuilder.Entity<Person>()
+                .HasOne(x => x.Client)
+                .WithOne(y => y.Person)
+                .HasPrincipalKey<Person>(p => p.Id);
 
             //Province
             modelBuilder.Entity<Province>()
@@ -101,9 +116,13 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
 
             modelBuilder.ApplyConfiguration<User>(new UserMetaData());
+
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Province> Provinces { get; set; }

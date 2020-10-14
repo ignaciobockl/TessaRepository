@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ECommerceTessa.Domain.IRepository;
+using ECommerceTessa.Infraestructure.Repository;
 using ECommerceTessa.Service.Implementation.Address;
 using ECommerceTessa.Service.Implementation.Location;
 using ECommerceTessa.Service.Implementation.Person;
@@ -30,7 +32,7 @@ namespace ECommerceTessa.Application.IoC
 
 
             //version generica
-            //services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            service.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             ////services.AddTransient<IRepository<Domain.Entities.Province>, Repository<Domain.Entities.Province>>();
 
             service.AddTransient<IAddressRepository, AddressRepository>();

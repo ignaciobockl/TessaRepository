@@ -2,3 +2,4 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Applic
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.IoC\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.IoC.csprojAssemblyReference.cache
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.IoC\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.IoC.AssemblyInfoInputs.cache
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.IoC\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.IoC.AssemblyInfo.cs
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.IoC\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.IoC.csproj.CoreCompileInputs.cache

@@ -1,0 +1,9 @@
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\bin\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.deps.json
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\bin\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.dll
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\bin\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.pdb
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.csprojAssemblyReference.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.csproj.CoreCompileInputs.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.AssemblyInfoInputs.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.AssemblyInfo.cs
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.dll
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Connection\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.pdb
