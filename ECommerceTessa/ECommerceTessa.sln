@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infraestructure", "5 - Infraestructure", "{A95E4A83-7226-48A3-B4CC-FF34ECD62F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Infraestructure", "ECommerceTessa.Infraestructure\ECommerceTessa.Infraestructure.csproj", "{BF9686CF-95E1-4A06-BE3C-21E14398A319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Infraestructure", "ECommerceTessa.Infraestructure\ECommerceTessa.Infraestructure.csproj", "{BF9686CF-95E1-4A06-BE3C-21E14398A319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Domain", "ECommerceTessa.Domain\ECommerceTessa.Domain.csproj", "{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Domain", "ECommerceTessa.Domain\ECommerceTessa.Domain.csproj", "{BDDAFF5F-A549-427F-9F75-23D7D6F8E7E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Interface", "3.1 - Interface", "{6C0743C1-E3ED-4401-946F-744F5A8908DF}"
 EndProject
@@ -23,21 +23,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - Implementation", "3.2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Connection", "2.1 - Connection", "{F0C320A1-B542-4716-B94B-628923FC5ACA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.Connection", "ECommerceTessa.Application.Connection\ECommerceTessa.Application.Connection.csproj", "{3BF47D3D-C468-473A-ABC0-ED6449E1D232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Application.Connection", "ECommerceTessa.Application.Connection\ECommerceTessa.Application.Connection.csproj", "{3BF47D3D-C468-473A-ABC0-ED6449E1D232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Service.Interface", "ECommerceTessa.Service.Interface\ECommerceTessa.Service.Interface.csproj", "{972120C3-10F6-4294-A084-182305AF5303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Service.Interface", "ECommerceTessa.Service.Interface\ECommerceTessa.Service.Interface.csproj", "{972120C3-10F6-4294-A084-182305AF5303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Service.Implementation", "ECommerceTessa.Service.Implementation\ECommerceTessa.Service.Implementation.csproj", "{B787D4E9-858E-452D-8243-A77AB6BE9DF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Service.Implementation", "ECommerceTessa.Service.Implementation\ECommerceTessa.Service.Implementation.csproj", "{B787D4E9-858E-452D-8243-A77AB6BE9DF0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - Api", "2.2 - Api", "{EE8D6403-EA4F-42D5-BB41-6C1467160363}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3 - IoC", "2.3 - IoC", "{0705DC1D-5B35-4755-A58A-E49F93D12E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.IoC", "ECommerceTessa.Application.IoC\ECommerceTessa.Application.IoC.csproj", "{B48AABF3-216F-4DBC-AC33-E57A24D94702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Application.IoC", "ECommerceTessa.Application.IoC\ECommerceTessa.Application.IoC.csproj", "{B48AABF3-216F-4DBC-AC33-E57A24D94702}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.4 - Helpers", "2.4 - Helpers", "{A802E9C4-C5C2-4424-8880-03644BD92E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceTessa.Application.Helpers", "ECommerceTessa.Application.Helpers\ECommerceTessa.Application.Helpers.csproj", "{75338814-D88D-4844-B1CF-BE81CBF11410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceTessa.Application.Helpers", "ECommerceTessa.Application.Helpers\ECommerceTessa.Application.Helpers.csproj", "{75338814-D88D-4844-B1CF-BE81CBF11410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiECommerceTessa", "WebApiECommerceTessa\WebApiECommerceTessa.csproj", "{F946FE21-0169-46DF-8F5A-0AC6F1DD4765}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{75338814-D88D-4844-B1CF-BE81CBF11410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75338814-D88D-4844-B1CF-BE81CBF11410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75338814-D88D-4844-B1CF-BE81CBF11410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F946FE21-0169-46DF-8F5A-0AC6F1DD4765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F946FE21-0169-46DF-8F5A-0AC6F1DD4765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F946FE21-0169-46DF-8F5A-0AC6F1DD4765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F946FE21-0169-46DF-8F5A-0AC6F1DD4765}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{B48AABF3-216F-4DBC-AC33-E57A24D94702} = {0705DC1D-5B35-4755-A58A-E49F93D12E9A}
 		{A802E9C4-C5C2-4424-8880-03644BD92E2E} = {78705CC8-0033-431E-8C75-ACE8E865F44A}
 		{75338814-D88D-4844-B1CF-BE81CBF11410} = {A802E9C4-C5C2-4424-8880-03644BD92E2E}
+		{F946FE21-0169-46DF-8F5A-0AC6F1DD4765} = {EE8D6403-EA4F-42D5-BB41-6C1467160363}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA79281E-D558-4EE8-AC61-43D24F35103C}

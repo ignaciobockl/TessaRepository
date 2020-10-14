@@ -19,7 +19,7 @@ namespace ECommerceTessa.Application.IoC
 {
     public class InjectionDependency
     {
-        public static void ConfigurationServices(IServiceCollection service)
+        public static void ConfigurationServices(IServiceCollection services)
         {
             //////////////////// EJEMPLO ////////////////////
 
@@ -28,18 +28,15 @@ namespace ECommerceTessa.Application.IoC
             //Singleton es cuando queremos servir la misma instancia siempre
 
 
-            //services.AddTransient<IProvinceRepository, ProvinceRepository>();
-
-
             //version generica
-            service.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             ////services.AddTransient<IRepository<Domain.Entities.Province>, Repository<Domain.Entities.Province>>();
 
-            service.AddTransient<IAddressRepository, AddressRepository>();
-            service.AddTransient<ILocationRepository, LocationRepository>();
-            service.AddTransient<IPersonRepository, PersonRepository>();
-            service.AddTransient<IProvinceRepository, ProvinceRepository>();
-            service.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IAddressRepository, AddressRepository>();
+            services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<IPersonRepository, PersonRepository>();
+            services.AddTransient<IProvinceRepository, ProvinceRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
         }
     }
 }
