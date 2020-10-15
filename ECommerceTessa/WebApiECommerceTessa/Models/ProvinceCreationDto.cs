@@ -6,10 +6,7 @@ using ECommerceTessa.Service.Interface.Province.DTOs;
 
 namespace WebApiECommerceTessa.Models
 {
-    public class ProvinceCreationDto
+    public class ProvinceCreationDto : ProvinceDto
     {
-        public long Id { get; set; }
-
-        public string Description { get; set; }
     }
 }

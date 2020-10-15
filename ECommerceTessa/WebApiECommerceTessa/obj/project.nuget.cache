@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0fZ2F60TLXfno4D3oZkpeXIJ9TAc3lNpndm5FnxNUdN+AisMOx97LYog0g0KgF+UHjOESmYtN/8dP+if8C7ITA==",
+  "dgSpecHash": "k7bVLxF1PP3Bp/Bf5EavzF05NDoR3nPAxBO3eg6H12yDfU68B7WE1hmqlMyYIhNZg6dskRxehwRqh/385W9CXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\WebApiECommerceTessa\\WebApiECommerceTessa.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.9\\microsoft.entityframeworkcore.analyzers.3.1.9.nupkg.sha512",
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.9\\microsoft.entityframeworkcore.design.3.1.9.nupkg.sha512",
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.9\\microsoft.entityframeworkcore.relational.3.1.9.nupkg.sha512",
-    "C:\\Users\\herma\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.8\\microsoft.entityframeworkcore.sqlserver.3.1.8.nupkg.sha512",
+    "C:\\Users\\herma\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.9\\microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.9\\microsoft.extensions.caching.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\herma\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.9\\microsoft.extensions.caching.memory.3.1.9.nupkg.sha512",

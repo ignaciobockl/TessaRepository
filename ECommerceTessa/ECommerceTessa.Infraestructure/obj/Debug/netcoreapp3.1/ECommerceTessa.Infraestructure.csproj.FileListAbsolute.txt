@@ -6,7 +6,6 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infrae
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.pdb
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.dll
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
-C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.csproj.CoreCompileInputs.cache
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.csproj.CopyComplete
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.dll
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.pdb
@@ -15,3 +14,4 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infrae
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.runtimeconfig.dev.json
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\bin\Debug\netcoreapp3.1\ECommerceTessa.Application.Connection.pdb
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.genruntimeconfig.cache
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Infraestructure\obj\Debug\netcoreapp3.1\ECommerceTessa.Infraestructure.csproj.CoreCompileInputs.cache

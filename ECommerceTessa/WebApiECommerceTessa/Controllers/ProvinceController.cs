@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ECommerceTessa.Service.Interface.Province;
+using ECommerceTessa.Service.Interface.Province.DTOs;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using WebApiECommerceTessa.Models;
 
 namespace WebApiECommerceTessa.Controllers
 {
@@ -53,6 +55,62 @@ namespace WebApiECommerceTessa.Controllers
             catch (Exception e)
             {
                 return BadRequest();
+            }
+        }
+
+        [HttpPost]
+        [EnableCors("_myPoliticy")]
+        [Route("create")]
+        public async Task<IActionResult> CreateProvince(ProvinceCreationDto dto)
+        {
+            var newProvince = new ProvinceCreationDto
+            {
+                Description = dto.Description,
+                ErasedState = false
+            };
+
+            await _provinceRepository.Create(newProvince);
+
+            return Ok(dto);
+        }
+
+        [HttpPut]
+        [EnableCors("_myPoliticy")]
+        [Route("update")]
+        public async Task<IActionResult> UpdateProvince(ProvinceCreationDto dto)
+        {
+            try
+            {
+                var update = new ProvinceCreationDto
+                {
+                    Description = dto.Description
+                };
+
+                await _provinceRepository.Update(dto);
+
+                return Ok(update);
+
+            }
+            catch (Exception e)
+            {
+                return NotFound("This Province cannot be changed.");
+            }
+        }
+
+        [HttpDelete]
+        [EnableCors("_myPoliticy")]
+        [Route("delete")]
+        public async Task<IActionResult> DeleteProvince(ProvinceCreationDto dto)
+        {
+            try
+            {
+                await _provinceRepository.Delete(dto);
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return NotFound("This Province cannot be delete");
             }
         }
     }
