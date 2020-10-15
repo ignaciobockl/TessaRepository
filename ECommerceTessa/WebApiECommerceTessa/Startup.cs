@@ -35,7 +35,7 @@ namespace WebApiECommerceTessa
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("http://example.com");
+                        builder.WithOrigins("https://localhost:44365");
                     });
             });
 

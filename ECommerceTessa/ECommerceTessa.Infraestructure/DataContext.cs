@@ -62,11 +62,11 @@ namespace ECommerceTessa.Infraestructure
 
             //Client 
             //Corroborar
-            modelBuilder.Entity<Client>()
+            /*modelBuilder.Entity<Client>()
                 .HasOne(x => x.Person)
                 .WithOne(y => y.Client)
                 .HasPrincipalKey<Person>(p => p.Id)
-                .HasForeignKey<Client>(c => c.PersonId);
+                .HasForeignKey<Client>(c => c.PersonId);*/
 
             //Location
             modelBuilder.Entity<Location>()
@@ -88,10 +88,10 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Users)
                 .WithOne(y => y.Person);
             //Corroborar
-            modelBuilder.Entity<Person>()
+            /*modelBuilder.Entity<Person>()
                 .HasOne(x => x.Client)
                 .WithOne(y => y.Person)
-                .HasPrincipalKey<Person>(p => p.Id);
+                .HasPrincipalKey<Person>(p => p.Id);*/
 
             //Province
             modelBuilder.Entity<Province>()

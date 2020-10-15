@@ -4,11 +4,11 @@ using System.Text;
 
 namespace ECommerceTessa.Domain.Entities
 {
-    public class Client
+    public class Client : Person
     {
-        public long PersonId { get; set; }
+        //public long PersonId { get; set; }
 
         //NAVIGATION PROPERTIES
-        public virtual Person Person { get; set; }
+        //public virtual Person Person { get; set; }
     }
 }

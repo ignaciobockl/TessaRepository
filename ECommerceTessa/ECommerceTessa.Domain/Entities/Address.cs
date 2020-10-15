@@ -8,7 +8,7 @@ namespace ECommerceTessa.Domain.Entities
     {
         public string Street { get; set; }
 
-        public int Number { get; set; }
+        public string Number { get; set; }
 
         public string Floor { get; set; }
 

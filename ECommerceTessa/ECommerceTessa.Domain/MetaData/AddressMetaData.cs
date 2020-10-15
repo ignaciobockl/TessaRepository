@@ -17,7 +17,7 @@ namespace ECommerceTessa.Domain.MetaData
                 .IsRequired();
 
             builder.Property(x => x.Number)
-                .HasMaxLength(6)
+                .HasMaxLength(5)
                 .IsRequired(false);
 
             builder.Property(x => x.Floor)
