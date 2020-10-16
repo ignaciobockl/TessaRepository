@@ -31,7 +31,7 @@ namespace ECommerceTessa.Domain.Entities
         //public virtual ICollection<Colour> Colour { get; set; }
         //public virtual Price Price {get; set;}
         //public virtual Brand Brand {get;set;}
-        //public virtual Category Category {get; set;}
+        public virtual Category Category {get; set;}
 
     }
 }
