@@ -65,8 +65,7 @@ namespace WebApiECommerceTessa.Controllers
         {
             var newProvince = new ProvinceCreationDto
             {
-                Description = dto.Description,
-                ErasedState = false
+                Description = dto.Description
             };
 
             await _provinceRepository.Create(newProvince);

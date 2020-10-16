@@ -26,7 +26,7 @@ namespace ECommerceTessa.Application.IoC
             ////services.AddTransient<IRepository<Domain.Entities.Province>, Repository<Domain.Entities.Province>>();
 
             //services.AddTransient<IAddressRepository, AddressRepository>();
-            //services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<ILocationRepository, LocationRepository>();
             //services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
             //services.AddTransient<IUserRepository, UserRepository>();
