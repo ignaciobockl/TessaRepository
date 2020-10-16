@@ -12,7 +12,7 @@ namespace ECommerceTessa.Domain.Entities
 
         public string Description { get; set; }
 
-        public string Photo { get; set; }
+        //public string Photo { get; set; }
 
         public bool DiscountStock { get; set; }
 
