@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
+using ECommerceTessa.Service.Interface.Base;
 
-namespace ECommerceTessa.Domain.Entities
+namespace ECommerceTessa.Service.Interface.Product.DTOs
 {
-    public class Product : EntityBase
+    public class ProductDto : DtoBase
     {
         public string Code { get; set; }
 
@@ -26,12 +26,5 @@ namespace ECommerceTessa.Domain.Entities
         public long BrandId { get; set; }
 
         public long CategoryId { get; set; }
-
-        //NAVIGATION PROPERTIES
-        //public virtual ICollection<Colour> Colour { get; set; }
-        //public virtual Price Price {get; set;}
-        //public virtual Brand Brand {get;set;}
-        //public virtual Category Category {get; set;}
-
     }
 }
