@@ -70,6 +70,12 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Products)
                 .WithOne(y => y.Category);
 
+            //Colour
+            modelBuilder.Entity<Colour>()
+                .HasOne(x => x.Product)
+                .WithMany(y => y.Colour)
+                .HasForeignKey(c => c.ProductId);
+
             //Client 
             //Corroborar
             /*modelBuilder.Entity<Client>()
@@ -121,11 +127,15 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Products)
                 .HasForeignKey(c => c.Category);
 
-            // one to one relationship price
+                     // one to one relationship price
             modelBuilder.Entity<Product>()
                 .HasOne(x => x.Price)
                 .WithOne(y => y.Product)
                 .HasForeignKey<Price>(p => p.Id);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(x => x.Colour)
+                .WithOne(y => y.Product);
 
             //Province
             modelBuilder.Entity<Province>()
@@ -147,6 +157,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Category>(new CategoryMetaData());
 
+            modelBuilder.ApplyConfiguration<Colour>(new ColourMetaData());
+
             modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
 
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
@@ -167,6 +179,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Colour> Colours { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Price> Prices { get; set; }
