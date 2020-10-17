@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ECommerceTessa.Domain.Entities
 {
-    public class Category : EntityBase
+    public class Brand : EntityBase
     {
         public string Name { get; set; }
 
