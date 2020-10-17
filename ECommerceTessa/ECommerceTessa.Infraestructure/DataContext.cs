@@ -76,6 +76,10 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Colour)
                 .HasForeignKey(c => c.ProductId);
 
+            modelBuilder.Entity<Colour>()
+                .HasMany(x => x.Waists)
+                .WithOne(y => y.Colour);
+
             //Client 
             //Corroborar
             /*modelBuilder.Entity<Client>()
@@ -148,6 +152,12 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Users)
                 .HasForeignKey(z => z.PersonId);
 
+            //Waist
+            modelBuilder.Entity<Waist>()
+                .HasOne(x => x.Colour)
+                .WithMany(y => y.Waists)
+                .HasForeignKey(w => w.ColourId);
+
 
 
             //Entity Configuration
@@ -171,6 +181,7 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<User>(new UserMetaData());
 
+            modelBuilder.ApplyConfiguration<Waist>(new WaistMetaData());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -186,5 +197,6 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Waist> Waists { get; set; }
     }
 }
