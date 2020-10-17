@@ -146,6 +146,13 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Locations)
                 .WithOne(y => y.Province);
 
+            //Stock
+                     // one to one relationship
+            modelBuilder.Entity<Stock>()
+                .HasOne(x => x.Waist)
+                .WithOne(y => y.Stock)
+                .HasForeignKey<Waist>(w => w.Id);
+
             //User
             modelBuilder.Entity<User>()
                 .HasOne(x => x.Person)
@@ -157,6 +164,12 @@ namespace ECommerceTessa.Infraestructure
                 .HasOne(x => x.Colour)
                 .WithMany(y => y.Waists)
                 .HasForeignKey(w => w.ColourId);
+
+                    // one to one relationship
+            modelBuilder.Entity<Waist>()
+                .HasOne(x => x.Stock)
+                .WithOne(y => y.Waist)
+                .HasForeignKey<Stock>(s => s.Id);
 
 
 
@@ -179,6 +192,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
 
+            modelBuilder.ApplyConfiguration<Stock>(new StockMetaData());
+
             modelBuilder.ApplyConfiguration<User>(new UserMetaData());
 
             modelBuilder.ApplyConfiguration<Waist>(new WaistMetaData());
@@ -196,6 +211,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Waist> Waists { get; set; }
     }

@@ -12,5 +12,7 @@ namespace ECommerceTessa.Domain.Entities
 
         //NAVIGATION PROPERTIES
         public virtual Colour Colour { get; set; }
+
+        public virtual Stock Stock { get; set; }
     }
 }
