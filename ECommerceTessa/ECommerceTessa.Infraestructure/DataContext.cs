@@ -60,6 +60,11 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Addresses)
                 .HasForeignKey(z => z.PersonId);
 
+            //Brand
+            modelBuilder.Entity<Brand>()
+                .HasMany(x => x.Products)
+                .WithOne(y => y.Brand);
+
             //Category
             modelBuilder.Entity<Category>()
                 .HasMany(x => x.Products)
@@ -100,10 +105,14 @@ namespace ECommerceTessa.Infraestructure
 
             //Product
             modelBuilder.Entity<Product>()
+                .HasOne(x => x.Brand)
+                .WithMany(y => y.Products)
+                .HasForeignKey(b => b.BrandId);
+
+            modelBuilder.Entity<Product>()
                 .HasOne(x => x.Category)
                 .WithMany(y => y.Products)
-                .HasForeignKey(p => p.Category);
-
+                .HasForeignKey(c => c.Category);
             // one to one relationship price
             /*modelBuilder.Entity<Product>()
                 .HasOne(x => x.Price)
@@ -126,6 +135,8 @@ namespace ECommerceTessa.Infraestructure
             //Entity Configuration
             modelBuilder.ApplyConfiguration<Address>(new AddressMetaData());
 
+            modelBuilder.ApplyConfiguration<Brand>(new BrandMetaData());
+
             modelBuilder.ApplyConfiguration<Category>(new CategoryMetaData());
 
             modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
@@ -143,6 +154,7 @@ namespace ECommerceTessa.Infraestructure
         }
 
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Location> Locations { get; set; }
