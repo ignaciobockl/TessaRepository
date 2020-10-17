@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace ECommerceTessa.Domain.Entities
@@ -16,7 +17,7 @@ namespace ECommerceTessa.Domain.Entities
 
         public int CellPhone { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        [DataType(DataType.DateTime)] public DateTime BirthDate { get; set; }
 
 
         //NAVIGATION PROPERTIES

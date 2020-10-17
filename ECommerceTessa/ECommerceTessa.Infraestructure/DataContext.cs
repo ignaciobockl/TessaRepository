@@ -70,6 +70,12 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Products)
                 .WithOne(y => y.Category);
 
+            //Colour
+            modelBuilder.Entity<Colour>()
+                .HasOne(x => x.Product)
+                .WithMany(y => y.Colour)
+                .HasForeignKey(c => c.ProductId);
+
             //Client 
             //Corroborar
             /*modelBuilder.Entity<Client>()
@@ -103,6 +109,13 @@ namespace ECommerceTessa.Infraestructure
                 .WithOne(y => y.Person)
                 .HasPrincipalKey<Person>(p => p.Id);*/
 
+            //Price
+            // one to one relationship price
+            modelBuilder.Entity<Price>()
+                .HasOne(x => x.Product)
+                .WithOne(y => y.Price)
+                .HasForeignKey<Product>(p => p.Id);
+
             //Product
             modelBuilder.Entity<Product>()
                 .HasOne(x => x.Brand)
@@ -113,11 +126,16 @@ namespace ECommerceTessa.Infraestructure
                 .HasOne(x => x.Category)
                 .WithMany(y => y.Products)
                 .HasForeignKey(c => c.Category);
-            // one to one relationship price
-            /*modelBuilder.Entity<Product>()
+
+                     // one to one relationship price
+            modelBuilder.Entity<Product>()
                 .HasOne(x => x.Price)
-                .WithOne(y => y.Person)
-                .HasForeignKey<Price>(p => p.Id);*/
+                .WithOne(y => y.Product)
+                .HasForeignKey<Price>(p => p.Id);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(x => x.Colour)
+                .WithOne(y => y.Product);
 
             //Province
             modelBuilder.Entity<Province>()
@@ -139,9 +157,13 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Category>(new CategoryMetaData());
 
+            modelBuilder.ApplyConfiguration<Colour>(new ColourMetaData());
+
             modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
 
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
+
+            modelBuilder.ApplyConfiguration<Price>(new PriceMetaData());
 
             modelBuilder.ApplyConfiguration<Product>(new ProductMetaData());
 
@@ -157,8 +179,10 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Colour> Colours { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<User> Users { get; set; }
