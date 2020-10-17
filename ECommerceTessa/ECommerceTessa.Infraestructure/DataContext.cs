@@ -103,6 +103,13 @@ namespace ECommerceTessa.Infraestructure
                 .WithOne(y => y.Person)
                 .HasPrincipalKey<Person>(p => p.Id);*/
 
+            //Price
+            // one to one relationship price
+            modelBuilder.Entity<Price>()
+                .HasOne(x => x.Product)
+                .WithOne(y => y.Price)
+                .HasForeignKey<Product>(p => p.Id);
+
             //Product
             modelBuilder.Entity<Product>()
                 .HasOne(x => x.Brand)
@@ -113,11 +120,12 @@ namespace ECommerceTessa.Infraestructure
                 .HasOne(x => x.Category)
                 .WithMany(y => y.Products)
                 .HasForeignKey(c => c.Category);
+
             // one to one relationship price
-            /*modelBuilder.Entity<Product>()
+            modelBuilder.Entity<Product>()
                 .HasOne(x => x.Price)
-                .WithOne(y => y.Person)
-                .HasForeignKey<Price>(p => p.Id);*/
+                .WithOne(y => y.Product)
+                .HasForeignKey<Price>(p => p.Id);
 
             //Province
             modelBuilder.Entity<Province>()
@@ -143,6 +151,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
 
+            modelBuilder.ApplyConfiguration<Price>(new PriceMetaData());
+
             modelBuilder.ApplyConfiguration<Product>(new ProductMetaData());
 
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
@@ -159,6 +169,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Client> Clients { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<User> Users { get; set; }
