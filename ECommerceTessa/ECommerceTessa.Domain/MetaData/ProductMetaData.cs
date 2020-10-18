@@ -24,16 +24,16 @@ namespace ECommerceTessa.Domain.MetaData
                 .IsRequired(false);
 
             builder.Property(x => x.DiscountStock)
-                .IsRequired(false);
+                .IsRequired();
 
             builder.Property(x => x.Discontinued)
-                .IsRequired(false);
+                .IsRequired();
 
             builder.Property(x => x.ShowBrand)
-                .IsRequired(false);
+                .IsRequired();
 
             builder.Property(x => x.Slow)
-                .IsRequired(false);
+                .IsRequired();
 
             builder.Property(x => x.BrandId)
                 .IsRequired();

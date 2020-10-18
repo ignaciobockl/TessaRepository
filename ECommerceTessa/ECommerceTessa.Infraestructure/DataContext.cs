@@ -129,7 +129,7 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.Entity<Product>()
                 .HasOne(x => x.Category)
                 .WithMany(y => y.Products)
-                .HasForeignKey(c => c.Category);
+                .HasForeignKey(c => c.CategoryId);
 
                      // one to one relationship price
             modelBuilder.Entity<Product>()

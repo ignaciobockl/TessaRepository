@@ -15,10 +15,10 @@ namespace ECommerceTessa.Domain.MetaData
                 .IsRequired();
 
             builder.Property(x => x.PromotionalPrice)
-                .IsRequired(false);
+                .IsRequired();
 
             builder.Property(x => x.DiscountPercentage)
-                .IsRequired(false);
+                .IsRequired();
         }
     }
 }
