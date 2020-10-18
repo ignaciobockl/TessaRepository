@@ -389,7 +389,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Domain\\ECommerceTessa.Domain.csproj": {
+                "projectPath": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Domain\\ECommerceTessa.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

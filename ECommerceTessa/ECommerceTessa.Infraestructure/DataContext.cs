@@ -81,6 +81,9 @@ namespace ECommerceTessa.Infraestructure
                 .WithOne(y => y.Colour);
 
             //Client 
+            modelBuilder.Entity<Client>()
+                .HasMany(x => x.Vouchers)
+                .WithOne(y => y.Client);
             //Corroborar
             /*modelBuilder.Entity<Client>()
                 .HasOne(x => x.Person)
@@ -159,6 +162,21 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Users)
                 .HasForeignKey(z => z.PersonId);
 
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.Vouchers)
+                .WithOne(y => y.User);
+
+            //Voucher
+            modelBuilder.Entity<Voucher>()
+                .HasOne(x => x.Client)
+                .WithMany(y => y.Vouchers)
+                .HasForeignKey(c => c.ClientId);
+
+            modelBuilder.Entity<Voucher>()
+                .HasOne(x => x.User)
+                .WithMany(y => y.Vouchers)
+                .HasForeignKey(u => u.UserId);
+
             //Waist
             modelBuilder.Entity<Waist>()
                 .HasOne(x => x.Colour)
@@ -196,6 +214,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<User>(new UserMetaData());
 
+            modelBuilder.ApplyConfiguration<Voucher>(new VoucherMetaData());
+
             modelBuilder.ApplyConfiguration<Waist>(new WaistMetaData());
 
             base.OnModelCreating(modelBuilder);
@@ -213,6 +233,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Province> Provinces { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<Waist> Waists { get; set; }
     }
 }
