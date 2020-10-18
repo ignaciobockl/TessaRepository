@@ -17,7 +17,8 @@ namespace ECommerceTessa.Domain.Entities
         public long PersonId { get; set; }
 
         //NAVIGATION PROPERTIES
-
         public virtual Person Person { get; set; } 
+
+        public virtual ICollection<Voucher> Vouchers { get; set; }
     }
 }

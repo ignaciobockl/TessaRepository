@@ -15,5 +15,7 @@ namespace ECommerceTessa.Domain.Entities
 
         //NAVIGATION PROPERTIES
         public virtual Product Product { get; set; }
+
+        public virtual ICollection<Waist> Waists { get; set; }
     }
 }

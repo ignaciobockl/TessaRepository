@@ -76,7 +76,14 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Colour)
                 .HasForeignKey(c => c.ProductId);
 
+            modelBuilder.Entity<Colour>()
+                .HasMany(x => x.Waists)
+                .WithOne(y => y.Colour);
+
             //Client 
+            modelBuilder.Entity<Client>()
+                .HasMany(x => x.Vouchers)
+                .WithOne(y => y.Client);
             //Corroborar
             /*modelBuilder.Entity<Client>()
                 .HasOne(x => x.Person)
@@ -93,6 +100,12 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.Entity<Location>()
                 .HasMany(x => x.Addresses)
                 .WithOne(y => y.Location);
+
+            //Movement
+            modelBuilder.Entity<Movement>()
+                .HasOne(x => x.Voucher)
+                .WithMany(y => y.Movements)
+                .HasForeignKey(v => v.VoucherId);
 
             //Person
             modelBuilder.Entity<Person>()
@@ -125,7 +138,7 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.Entity<Product>()
                 .HasOne(x => x.Category)
                 .WithMany(y => y.Products)
-                .HasForeignKey(c => c.Category);
+                .HasForeignKey(c => c.CategoryId);
 
                      // one to one relationship price
             modelBuilder.Entity<Product>()
@@ -142,11 +155,49 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Locations)
                 .WithOne(y => y.Province);
 
+            //Stock
+                     // one to one relationship
+            modelBuilder.Entity<Stock>()
+                .HasOne(x => x.Waist)
+                .WithOne(y => y.Stock)
+                .HasForeignKey<Waist>(w => w.Id);
+
             //User
             modelBuilder.Entity<User>()
                 .HasOne(x => x.Person)
                 .WithMany(y => y.Users)
                 .HasForeignKey(z => z.PersonId);
+
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.Vouchers)
+                .WithOne(y => y.User);
+
+            //Voucher
+            modelBuilder.Entity<Voucher>()
+                .HasOne(x => x.Client)
+                .WithMany(y => y.Vouchers)
+                .HasForeignKey(c => c.ClientId);
+
+            modelBuilder.Entity<Voucher>()
+                .HasOne(x => x.User)
+                .WithMany(y => y.Vouchers)
+                .HasForeignKey(u => u.UserId);
+
+            modelBuilder.Entity<Voucher>()
+                .HasMany(x => x.Movements)
+                .WithOne(y => y.Voucher);
+
+            //Waist
+            modelBuilder.Entity<Waist>()
+                .HasOne(x => x.Colour)
+                .WithMany(y => y.Waists)
+                .HasForeignKey(w => w.ColourId);
+
+                    // one to one relationship
+            modelBuilder.Entity<Waist>()
+                .HasOne(x => x.Stock)
+                .WithOne(y => y.Waist)
+                .HasForeignKey<Stock>(s => s.Id);
 
 
 
@@ -161,6 +212,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
 
+            modelBuilder.ApplyConfiguration<Movement>(new MovementMetaData());
+
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
 
             modelBuilder.ApplyConfiguration<Price>(new PriceMetaData());
@@ -169,8 +222,13 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
 
+            modelBuilder.ApplyConfiguration<Stock>(new StockMetaData());
+
             modelBuilder.ApplyConfiguration<User>(new UserMetaData());
 
+            modelBuilder.ApplyConfiguration<Voucher>(new VoucherMetaData());
+
+            modelBuilder.ApplyConfiguration<Waist>(new WaistMetaData());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -181,10 +239,14 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Client> Clients { get; set; }
         public DbSet<Colour> Colours { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Movement> Movements { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Province> Provinces { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Voucher> Vouchers { get; set; }
+        public DbSet<Waist> Waists { get; set; }
     }
 }

@@ -1513,6 +1513,9 @@
       "ECommerceTessa.Service.Interface/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ECommerceTessa.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ECommerceTessa.Service.Interface.dll": {}
         },
