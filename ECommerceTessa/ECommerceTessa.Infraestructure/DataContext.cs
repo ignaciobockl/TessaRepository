@@ -101,6 +101,12 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Addresses)
                 .WithOne(y => y.Location);
 
+            //Movement
+            modelBuilder.Entity<Movement>()
+                .HasOne(x => x.Voucher)
+                .WithMany(y => y.Movements)
+                .HasForeignKey(v => v.VoucherId);
+
             //Person
             modelBuilder.Entity<Person>()
                 .HasMany(x => x.Addresses)
@@ -177,6 +183,10 @@ namespace ECommerceTessa.Infraestructure
                 .WithMany(y => y.Vouchers)
                 .HasForeignKey(u => u.UserId);
 
+            modelBuilder.Entity<Voucher>()
+                .HasMany(x => x.Movements)
+                .WithOne(y => y.Voucher);
+
             //Waist
             modelBuilder.Entity<Waist>()
                 .HasOne(x => x.Colour)
@@ -201,6 +211,8 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.ApplyConfiguration<Colour>(new ColourMetaData());
 
             modelBuilder.ApplyConfiguration<Location>(new LocationMetaData());
+
+            modelBuilder.ApplyConfiguration<Movement>(new MovementMetaData());
 
             modelBuilder.ApplyConfiguration<Person>(new PersonMetaData());
 
@@ -227,6 +239,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Client> Clients { get; set; }
         public DbSet<Colour> Colours { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Movement> Movements { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }

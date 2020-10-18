@@ -34,5 +34,7 @@ namespace ECommerceTessa.Domain.Entities
         public virtual Client Client { get; set; }
 
         public virtual User User { get; set; }
+
+        public virtual ICollection<Movement> Movements { get; set; }
     }
 }
