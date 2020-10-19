@@ -13,9 +13,9 @@ namespace ECommerceTessa.Domain.Entities
 
         public int Dni { get; set; }
 
-        public int Cuil { get; set; }
+        public long Cuil { get; set; }
 
-        public int CellPhone { get; set; }
+        public long CellPhone { get; set; }
 
         [DataType(DataType.DateTime)] public DateTime BirthDate { get; set; }
 

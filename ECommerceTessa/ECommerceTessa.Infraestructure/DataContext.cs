@@ -84,6 +84,8 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.Entity<Client>()
                 .HasMany(x => x.Vouchers)
                 .WithOne(y => y.Client);
+
+
             //Corroborar
             /*modelBuilder.Entity<Client>()
                 .HasOne(x => x.Person)

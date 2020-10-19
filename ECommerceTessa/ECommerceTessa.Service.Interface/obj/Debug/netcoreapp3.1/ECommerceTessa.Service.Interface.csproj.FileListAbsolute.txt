@@ -7,3 +7,6 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Servic
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.AssemblyInfo.cs
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.dll
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.pdb
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.dll
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
+C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.csproj.CopyComplete

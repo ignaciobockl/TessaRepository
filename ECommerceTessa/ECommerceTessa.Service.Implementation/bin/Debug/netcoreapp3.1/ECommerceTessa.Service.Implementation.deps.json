@@ -1044,6 +1044,9 @@
         }
       },
       "ECommerceTessa.Service.Interface/1.0.0": {
+        "dependencies": {
+          "ECommerceTessa.Domain": "1.0.0"
+        },
         "runtime": {
           "ECommerceTessa.Service.Interface.dll": {}
         }
