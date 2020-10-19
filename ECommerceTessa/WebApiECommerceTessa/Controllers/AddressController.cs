@@ -10,7 +10,6 @@ using WebApiECommerceTessa.Models;
 
 namespace WebApiECommerceTessa.Controllers
 {
-    //[]
     [Route("api/[controller]")]
     [ApiController]
     public class AddressController:ControllerBase
