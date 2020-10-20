@@ -24,8 +24,8 @@ namespace ECommerceTessa.Service.Implementation.User
             {
                 UserName = dto.UserName,
                 Password = dto.Password,
-                IsBlocked = dto.IsBlocked,
-                Admin = dto.Admin,
+                IsBlocked = false,
+                Admin = false,
                 ErasedState = false,
                 PersonId = dto.PersonId
             };
@@ -55,6 +55,29 @@ namespace ECommerceTessa.Service.Implementation.User
             else
             {
                 throw new Exception("This User not exist");
+            }
+        }
+
+        public async Task<UserDto> GetById(long userId)
+        {
+            var user = await _userRepository.GetById(userId);
+
+            if (user == null)
+            {
+                return null;
+            }
+            else
+            {
+                return new UserDto
+                {
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    Password = user.Password,
+                    IsBlocked = user.IsBlocked,
+                    Admin = user.Admin,
+                    PersonId = user.PersonId,
+                    ErasedState = user.ErasedState
+                };
             }
         }
 
