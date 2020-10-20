@@ -15,6 +15,9 @@ namespace ECommerceTessa.Domain.MetaData
                 .HasMaxLength(200)
                 .HasField("_description")
                 .IsRequired();
+
+            builder.Property(x => x.ProvinceId)
+                .IsRequired();
         }
     }
 }
