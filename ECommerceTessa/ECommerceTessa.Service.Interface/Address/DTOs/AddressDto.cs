@@ -23,6 +23,8 @@ namespace ECommerceTessa.Service.Interface.Address.DTOs
 
         public string Neighborhood { get; set; }
 
+        public int PostalCode { get; set; }
+
         public string Observation { get; set; }
 
         public long LocationId { get; set; }

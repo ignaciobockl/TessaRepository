@@ -21,7 +21,5 @@ namespace ECommerceTessa.Service.Interface.Voucher.DTOs
         public WayToPay WayToPay { get; set; }
 
         public long UserId { get; set; }
-
-        public long ClientId { get; set; }
     }
 }

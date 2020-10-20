@@ -10,7 +10,7 @@ namespace ECommerceTessa.Service.Interface.Address
     {
         Task Create(AddressDto dto);
 
-        Task<IEnumerable<AddressDto>> GetAll();
+        //Task<IEnumerable<AddressDto>> GetAll();
 
         Task<AddressDto> GetById(long addressId);
 

@@ -10,6 +10,5 @@ namespace ECommerceTessa.Domain.Entities
 
         //NAVIGATION PROPERTIES
         //public virtual Person Person { get; set; }
-        public virtual ICollection<Voucher> Vouchers { get; set; }
     }
 }

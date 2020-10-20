@@ -31,7 +31,6 @@ namespace ECommerceTessa.Service.Implementation
                 Total = dto.Total,
                 WayToPay = dto.WayToPay,
                 UserId = dto.UserId,
-                ClientId = dto.ClientId,
                 ErasedState = false
             };
 
@@ -78,7 +77,6 @@ namespace ECommerceTessa.Service.Implementation
                 Discount = x.Discount,
                 Total = x.Total,
                 WayToPay = x.WayToPay,
-                ClientId = x.ClientId,
                 UserId = x.UserId,
                 ErasedState = x.ErasedState
             });
@@ -103,7 +101,6 @@ namespace ECommerceTessa.Service.Implementation
                     Discount = voucher.Discount,
                     Total = voucher.Total,
                     WayToPay = voucher.WayToPay,
-                    ClientId = voucher.ClientId,
                     UserId = voucher.UserId,
                     ErasedState = voucher.ErasedState
                 };
@@ -134,7 +131,6 @@ namespace ECommerceTessa.Service.Implementation
                     updateVoucher.Total = dto.Total;
                     updateVoucher.WayToPay = dto.WayToPay;
                     updateVoucher.UserId = dto.UserId;
-                    updateVoucher.ClientId = dto.ClientId;
 
                     await _voucherRepository.Update(updateVoucher);
                 }

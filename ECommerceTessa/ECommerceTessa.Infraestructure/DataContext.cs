@@ -80,10 +80,7 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Waists)
                 .WithOne(y => y.Colour);
 
-            //Client 
-            modelBuilder.Entity<Client>()
-                .HasMany(x => x.Vouchers)
-                .WithOne(y => y.Client);
+            //Cliente
             //Corroborar
             /*modelBuilder.Entity<Client>()
                 .HasOne(x => x.Person)
@@ -173,11 +170,6 @@ namespace ECommerceTessa.Infraestructure
                 .WithOne(y => y.User);
 
             //Voucher
-            modelBuilder.Entity<Voucher>()
-                .HasOne(x => x.Client)
-                .WithMany(y => y.Vouchers)
-                .HasForeignKey(c => c.ClientId);
-
             modelBuilder.Entity<Voucher>()
                 .HasOne(x => x.User)
                 .WithMany(y => y.Vouchers)

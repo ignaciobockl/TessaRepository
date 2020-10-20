@@ -31,6 +31,7 @@ namespace ECommerceTessa.Service.Implementation.Address
                 Lot = dto.Lot,
                 Apple = dto.Apple,
                 Neighborhood = dto.Neighborhood,
+                PostalCode = dto.PostalCode,
                 Observation = dto.Observation,
                 LocationId = dto.LocationId,
                 PersonId = dto.PersonId
@@ -64,7 +65,7 @@ namespace ECommerceTessa.Service.Implementation.Address
             }
         }
 
-        public async Task<IEnumerable<AddressDto>> GetAll()
+        /*public async Task<IEnumerable<AddressDto>> GetAll()
         {
             var allAddress = await _addressRepository.GetAll();
 
@@ -83,7 +84,7 @@ namespace ECommerceTessa.Service.Implementation.Address
                 LocationId = x.LocationId,
                 PersonId = x.PersonId
             });
-        }
+        }*/
 
         public async Task<AddressDto> GetById(long addressId)
         {
@@ -106,6 +107,7 @@ namespace ECommerceTessa.Service.Implementation.Address
                     Lot = address.Lot,
                     Apple = address.Apple,
                     Neighborhood = address.Neighborhood,
+                    PostalCode = address.PostalCode,
                     Observation = address.Observation,
                     LocationId = address.LocationId,
                     PersonId = address.PersonId,
@@ -139,6 +141,7 @@ namespace ECommerceTessa.Service.Implementation.Address
                     updateAddress.Lot = dto.Lot;
                     updateAddress.Apple = dto.Apple;
                     updateAddress.Neighborhood = dto.Neighborhood;
+                    updateAddress.PostalCode = dto.PostalCode;
                     updateAddress.Observation = dto.Observation;
                     updateAddress.LocationId = dto.LocationId;
                     updateAddress.PersonId = dto.PersonId;

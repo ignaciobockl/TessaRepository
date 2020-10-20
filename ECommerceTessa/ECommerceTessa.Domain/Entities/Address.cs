@@ -22,6 +22,8 @@ namespace ECommerceTessa.Domain.Entities
 
         public string Neighborhood { get; set; }
 
+        public int PostalCode { get; set; }
+
         public string Observation { get; set; }
 
         public long LocationId { get; set; }

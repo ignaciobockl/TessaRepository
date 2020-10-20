@@ -28,11 +28,8 @@ namespace ECommerceTessa.Domain.Entities
 
         public long UserId { get; set; }
 
-        public long ClientId { get; set; }
 
         //NAVIGATION PROPERTIES
-        public virtual Client Client { get; set; }
-
         public virtual User User { get; set; }
 
         public virtual ICollection<Movement> Movements { get; set; }

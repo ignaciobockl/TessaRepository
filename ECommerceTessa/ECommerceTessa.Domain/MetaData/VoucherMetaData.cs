@@ -33,9 +33,6 @@ namespace ECommerceTessa.Domain.MetaData
             builder.Property(x => x.UserId)
                 .IsRequired();
 
-            builder.Property(x => x.ClientId)
-                .IsRequired();
-
         }
     }
 }

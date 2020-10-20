@@ -41,12 +41,16 @@ namespace ECommerceTessa.Domain.MetaData
                 .IsRequired(false);
 
             builder.Property(x => x.Neighborhood)
-                .HasMaxLength(25)
+                .HasMaxLength(30)
                 .IsRequired();
 
             builder.Property(x => x.Observation)
                 .HasMaxLength(50)
                 .IsRequired(false);
+
+            builder.Property(x => x.PostalCode)
+                .HasMaxLength(6)
+                .IsRequired();
         }
     }
 }
