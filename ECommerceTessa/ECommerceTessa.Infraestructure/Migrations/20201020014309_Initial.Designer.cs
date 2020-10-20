@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerceTessa.Infraestructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201019234736_Initial")]
+    [Migration("20201020014309_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -407,9 +407,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("ClientId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -436,8 +433,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
 
                     b.HasIndex("UserId");
 
@@ -560,12 +555,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Voucher", b =>
                 {
-                    b.HasOne("ECommerceTessa.Domain.Entities.Client", "Client")
-                        .WithMany("Vouchers")
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ECommerceTessa.Domain.Entities.User", "User")
                         .WithMany("Vouchers")
                         .HasForeignKey("UserId")

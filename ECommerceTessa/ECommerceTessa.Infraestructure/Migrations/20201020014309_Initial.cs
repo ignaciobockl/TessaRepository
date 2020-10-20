@@ -203,18 +203,11 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     Discount = table.Column<decimal>(nullable: false),
                     Total = table.Column<decimal>(nullable: false),
                     WayToPay = table.Column<int>(nullable: false),
-                    UserId = table.Column<long>(nullable: false),
-                    ClientId = table.Column<long>(nullable: false)
+                    UserId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Vouchers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Vouchers_Persons_ClientId",
-                        column: x => x.ClientId,
-                        principalTable: "Persons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Vouchers_Users_UserId",
                         column: x => x.UserId,
@@ -362,11 +355,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
                 name: "IX_Users_PersonId",
                 table: "Users",
                 column: "PersonId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Vouchers_ClientId",
-                table: "Vouchers",
-                column: "ClientId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Vouchers_UserId",

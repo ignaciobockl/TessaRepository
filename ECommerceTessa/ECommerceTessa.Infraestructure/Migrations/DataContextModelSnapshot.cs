@@ -405,9 +405,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("ClientId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -434,8 +431,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
 
                     b.HasIndex("UserId");
 
@@ -558,12 +553,6 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Voucher", b =>
                 {
-                    b.HasOne("ECommerceTessa.Domain.Entities.Client", "Client")
-                        .WithMany("Vouchers")
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ECommerceTessa.Domain.Entities.User", "User")
                         .WithMany("Vouchers")
                         .HasForeignKey("UserId")
