@@ -13,6 +13,7 @@ using ECommerceTessa.Service.Implementation.Person;
 using ECommerceTessa.Service.Implementation.Price;
 using ECommerceTessa.Service.Implementation.Province;
 using ECommerceTessa.Service.Implementation.User;
+using ECommerceTessa.Service.Implementation.Waist;
 using ECommerceTessa.Service.Interface.Address;
 using ECommerceTessa.Service.Interface.Brand;
 using ECommerceTessa.Service.Interface.Category;
@@ -23,6 +24,7 @@ using ECommerceTessa.Service.Interface.Person;
 using ECommerceTessa.Service.Interface.Price;
 using ECommerceTessa.Service.Interface.Province;
 using ECommerceTessa.Service.Interface.User;
+using ECommerceTessa.Service.Interface.Waist;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ECommerceTessa.Application.IoC
@@ -62,6 +64,8 @@ namespace ECommerceTessa.Application.IoC
             //User
             services.AddTransient<IUserRepository, UserRepository>();
 
+            //Waist
+            services.AddTransient<IWaistRepository, WaistRepository>();
         }
     }
 }
