@@ -28,6 +28,7 @@ namespace ECommerceTessa.Service.Implementation.Person
                 Cuil = dto.Cuil,
                 CellPhone = dto.CellPhone,
                 BirthDate = dto.BirthDate,
+                Email = dto.Email,
                 ErasedState = false
             };
 
@@ -81,6 +82,7 @@ namespace ECommerceTessa.Service.Implementation.Person
                     updatePerson.Dni = dto.Dni;
                     updatePerson.Cuil = dto.Cuil;
                     updatePerson.CellPhone = dto.CellPhone;
+                    updatePerson.Email = dto.Email;
                     updatePerson.BirthDate = dto.BirthDate;
 
                     await _personRepository.Update(updatePerson);

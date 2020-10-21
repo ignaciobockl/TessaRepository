@@ -29,6 +29,7 @@ namespace ECommerceTessa.Service.Implementation.Client
                 Cuil = dto.Cuil,
                 CellPhone = dto.CellPhone,
                 BirthDate = dto.BirthDate,
+                Email = dto.Email,
                 ErasedState = false
             };
 
@@ -80,6 +81,7 @@ namespace ECommerceTessa.Service.Implementation.Client
                     Dni = client.Dni,
                     Cuil = client.Cuil,
                     CellPhone = client.CellPhone,
+                    Email = client.Email,
                     BirthDate = client.BirthDate
                 };
             }
@@ -107,6 +109,7 @@ namespace ECommerceTessa.Service.Implementation.Client
                     updateClient.Dni = dto.Dni;
                     updateClient.Cuil = dto.Cuil;
                     updateClient.CellPhone = dto.CellPhone;
+                    updateClient.Email = dto.Email;
                     updateClient.BirthDate = dto.BirthDate;
 
                     await _clientRepository.Update(updateClient);

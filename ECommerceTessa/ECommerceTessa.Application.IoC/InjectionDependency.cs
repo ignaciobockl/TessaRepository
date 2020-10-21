@@ -4,12 +4,14 @@ using System.Text;
 using ECommerceTessa.Domain.IRepository;
 using ECommerceTessa.Infraestructure.Repository;
 using ECommerceTessa.Service.Implementation.Address;
+using ECommerceTessa.Service.Implementation.Brand;
 using ECommerceTessa.Service.Implementation.Client;
 using ECommerceTessa.Service.Implementation.Location;
 using ECommerceTessa.Service.Implementation.Person;
 using ECommerceTessa.Service.Implementation.Province;
 using ECommerceTessa.Service.Implementation.User;
 using ECommerceTessa.Service.Interface.Address;
+using ECommerceTessa.Service.Interface.Brand;
 using ECommerceTessa.Service.Interface.Client;
 using ECommerceTessa.Service.Interface.Location;
 using ECommerceTessa.Service.Interface.Person;
@@ -27,12 +29,23 @@ namespace ECommerceTessa.Application.IoC
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             ////services.AddTransient<IRepository<Domain.Entities.Province>, Repository<Domain.Entities.Province>>();
 
+            //Address
             services.AddTransient<IAddressRepository, AddressRepository>();
+            
+            //Brand
+            services.AddTransient<IBrandRepository, BrandRepository>();
+            
+            //Client
             services.AddTransient<IClientRepository, ClientRepository>();
+            
+            //Location
             services.AddTransient<ILocationRepository, LocationRepository>();
-            //services.AddTransient<IPersonRepository, PersonRepository>();
+
+            //Province
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
-            //services.AddTransient<IUserRepository, UserRepository>();
+            
+            //User
+            services.AddTransient<IUserRepository, UserRepository>();
 
         }
     }

@@ -13,5 +13,7 @@ namespace ECommerceTessa.Service.Interface.User
         Task Update(UserDto dto);
 
         Task Delete(UserDto dto);
+
+        Task<UserDto> GetById(long userId);
     }
 }
