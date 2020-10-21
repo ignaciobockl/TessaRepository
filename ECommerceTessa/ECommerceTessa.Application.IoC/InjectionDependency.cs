@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ECommerceTessa.Domain.IRepository;
 using ECommerceTessa.Infraestructure.Repository;
+using ECommerceTessa.Service.Implementation;
 using ECommerceTessa.Service.Implementation.Address;
 using ECommerceTessa.Service.Implementation.Brand;
 using ECommerceTessa.Service.Implementation.Category;
@@ -16,6 +17,7 @@ using ECommerceTessa.Service.Interface.Address;
 using ECommerceTessa.Service.Interface.Brand;
 using ECommerceTessa.Service.Interface.Category;
 using ECommerceTessa.Service.Interface.Client;
+using ECommerceTessa.Service.Interface.Colour;
 using ECommerceTessa.Service.Interface.Location;
 using ECommerceTessa.Service.Interface.Person;
 using ECommerceTessa.Service.Interface.Price;
@@ -44,6 +46,9 @@ namespace ECommerceTessa.Application.IoC
 
             //Client
             services.AddTransient<IClientRepository, ClientRepository>();
+
+            //Colour
+            services.AddTransient<IColourRepository, ColourRepository>();
             
             //Location
             services.AddTransient<ILocationRepository, LocationRepository>();
