@@ -17,6 +17,8 @@ namespace ECommerceTessa.Service.Interface.Person.DTOs
 
         public long CellPhone { get; set; }
 
+        public string Email { get; set; }
+
         public DateTime BirthDate { get; set; }
     }
 }

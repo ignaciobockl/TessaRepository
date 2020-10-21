@@ -34,6 +34,10 @@ namespace ECommerceTessa.Domain.MetaData
 
             builder.Property(x => x.BirthDate)
                 .IsRequired();
+
+            builder.Property(x => x.Email)
+                .HasMaxLength(50)
+                .IsRequired();
         }
     }
 }

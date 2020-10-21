@@ -17,6 +17,8 @@ namespace ECommerceTessa.Domain.Entities
 
         public long CellPhone { get; set; }
 
+        public string Email { get; set; }
+
         [DataType(DataType.DateTime)] public DateTime BirthDate { get; set; }
 
 
