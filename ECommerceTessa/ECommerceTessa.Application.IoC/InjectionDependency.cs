@@ -32,7 +32,7 @@ namespace ECommerceTessa.Application.IoC
             services.AddTransient<ILocationRepository, LocationRepository>();
             //services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
-            //services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
         }
     }
