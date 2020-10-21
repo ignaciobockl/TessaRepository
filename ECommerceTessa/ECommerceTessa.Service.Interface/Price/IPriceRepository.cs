@@ -16,6 +16,6 @@ namespace ECommerceTessa.Service.Interface.Price
 
         Task<PriceDto> GetById(long priceId);
 
-        Task<IEnumerable<PriceDto>> GetAll();
+        //Task<IEnumerable<PriceDto>> GetAll();
     }
 }
