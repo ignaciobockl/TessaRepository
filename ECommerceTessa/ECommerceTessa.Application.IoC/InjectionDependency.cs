@@ -5,6 +5,7 @@ using ECommerceTessa.Domain.IRepository;
 using ECommerceTessa.Infraestructure.Repository;
 using ECommerceTessa.Service.Implementation.Address;
 using ECommerceTessa.Service.Implementation.Brand;
+using ECommerceTessa.Service.Implementation.Category;
 using ECommerceTessa.Service.Implementation.Client;
 using ECommerceTessa.Service.Implementation.Location;
 using ECommerceTessa.Service.Implementation.Person;
@@ -12,6 +13,7 @@ using ECommerceTessa.Service.Implementation.Province;
 using ECommerceTessa.Service.Implementation.User;
 using ECommerceTessa.Service.Interface.Address;
 using ECommerceTessa.Service.Interface.Brand;
+using ECommerceTessa.Service.Interface.Category;
 using ECommerceTessa.Service.Interface.Client;
 using ECommerceTessa.Service.Interface.Location;
 using ECommerceTessa.Service.Interface.Person;
@@ -35,6 +37,9 @@ namespace ECommerceTessa.Application.IoC
             //Brand
             services.AddTransient<IBrandRepository, BrandRepository>();
             
+            //Category
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
             //Client
             services.AddTransient<IClientRepository, ClientRepository>();
             
