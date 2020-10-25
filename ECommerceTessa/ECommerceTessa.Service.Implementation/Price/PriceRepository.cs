@@ -59,7 +59,7 @@ namespace ECommerceTessa.Service.Implementation.Price
             }
         }
 
-        public async Task<IEnumerable<PriceDto>> GetAll()
+        /*public async Task<IEnumerable<PriceDto>> GetAll()
         {
             var allPrice = await _priceRepository.GetAll();
 
@@ -71,7 +71,7 @@ namespace ECommerceTessa.Service.Implementation.Price
                 DiscountPercentage = x.DiscountPercentage,
                 ErasedState = x.ErasedState
             });
-        }
+        }*/
 
         public async Task<PriceDto> GetById(long priceId)
         {
