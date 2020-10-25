@@ -61,6 +61,9 @@ namespace ECommerceTessa.Application.IoC
             //Province
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
             
+            //Stock
+            services.AddTransient<IUserRepository, UserRepository>();
+
             //User
             services.AddTransient<IUserRepository, UserRepository>();
 
