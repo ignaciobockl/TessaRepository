@@ -24,6 +24,7 @@ using ECommerceTessa.Service.Interface.Person;
 using ECommerceTessa.Service.Interface.Price;
 using ECommerceTessa.Service.Interface.Province;
 using ECommerceTessa.Service.Interface.User;
+using ECommerceTessa.Service.Interface.Voucher;
 using ECommerceTessa.Service.Interface.Waist;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -66,6 +67,9 @@ namespace ECommerceTessa.Application.IoC
 
             //User
             services.AddTransient<IUserRepository, UserRepository>();
+
+            //Voucher
+            services.AddTransient<IVoucherRepository, VoucherRepository>();
 
             //Waist
             services.AddTransient<IWaistRepository, WaistRepository>();
