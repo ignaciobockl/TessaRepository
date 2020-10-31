@@ -16,7 +16,7 @@ namespace ECommerceTessa.Infraestructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //Configure SQL Server Connection
-            optionsBuilder.UseSqlServer(GetWINDOWSConnectionString);
+            optionsBuilder.UseSqlServer(GetSQLConnectionString);
 
             base.OnConfiguring(optionsBuilder);
         }
