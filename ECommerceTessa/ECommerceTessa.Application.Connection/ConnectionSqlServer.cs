@@ -6,10 +6,10 @@ namespace ECommerceTessa.Application.Connection
 {
     public static class ConnectionSqlServer
     {
-        private const string Server = @"DESKTOP-AVIBG03\SQLEXPRESS";
-        private const string DataBase = "Tessa";
-        private const string User = "";
-        private const string Password = "";
+        private const string Server = @"TessaIntimates2020.mssql.somee.com";
+        private const string DataBase = "TessaIntimates2020";
+        private const string User = "nacho144_SQLLogin_1";
+        private const string Password = "w58ubemmkg";
 
         public static string GetSQLConnectionString => $"Data Source={Server}; " +
                                                        $"Initial Catalog={DataBase}; " +
