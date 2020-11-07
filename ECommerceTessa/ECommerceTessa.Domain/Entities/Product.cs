@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ECommerceTessa.Domain.Entities.Cloudinary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -13,7 +14,7 @@ namespace ECommerceTessa.Domain.Entities
 
         public string Description { get; set; }
 
-        //public List<string> ProductPhoto { get; set; }
+        public List<ProductPhoto> ProductPhoto { get; set; }
 
         public bool DiscountStock { get; set; }
 
@@ -32,6 +33,7 @@ namespace ECommerceTessa.Domain.Entities
         public virtual Price Price {get; set;}
         public virtual Brand Brand {get;set;}
         public virtual Category Category {get; set;}
+        public virtual ICollection<ProductPhoto> ProductPhotos { get; set; }
 
     }
 }

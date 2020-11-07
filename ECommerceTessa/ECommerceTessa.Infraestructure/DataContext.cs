@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using ECommerceTessa.Domain.Entities;
+using ECommerceTessa.Domain.Entities.Cloudinary;
 using ECommerceTessa.Domain.MetaData;
 using static ECommerceTessa.Application.Connection.ConnectionSqlServer;
 
@@ -147,6 +148,16 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Colour)
                 .WithOne(y => y.Product);
 
+            modelBuilder.Entity<Product>()
+                .HasMany(x => x.ProductPhotos)
+                .WithOne(y => y.Product);
+
+            //Product Photo
+            modelBuilder.Entity<ProductPhoto>()
+                .HasOne(x => x.Product)
+                .WithMany(y => y.ProductPhotos)
+                .HasForeignKey(p => p.ProductId);
+
             //Province
             modelBuilder.Entity<Province>()
                 .HasMany(x => x.Locations)
@@ -212,6 +223,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Product>(new ProductMetaData());
 
+            modelBuilder.ApplyConfiguration<ProductPhoto>(new ProductPhotoMetaData());
+
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
 
             modelBuilder.ApplyConfiguration<Stock>(new StockMetaData());
@@ -235,6 +248,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Person> Persons { get; set; }
         public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductPhoto> ProductPhotos { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<User> Users { get; set; }
