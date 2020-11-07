@@ -12,6 +12,8 @@ namespace ECommerceTessa.Service.Interface.Product
 
         Task<ProductDto> GetById(long productId);
 
+        Task<IEnumerable<ProductDto>> GetAll();
+
         Task Update(ProductDto dto);
 
         Task Delete(ProductDto dto);
