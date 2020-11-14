@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ignacio Bockl\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj": {}
+    "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ignacio Bockl\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj": {
+    "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ignacio Bockl\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj",
+        "projectUniqueName": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj",
         "projectName": "ECommerceTessa.Application.Helpers",
-        "projectPath": "C:\\Users\\Ignacio Bockl\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj",
-        "packagesPath": "C:\\Users\\Ignacio Bockl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ignacio Bockl\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\obj\\",
+        "projectPath": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\ECommerceTessa.Application.Helpers.csproj",
+        "packagesPath": "C:\\Users\\Nacho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Helpers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ignacio Bockl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nacho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

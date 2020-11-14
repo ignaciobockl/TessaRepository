@@ -10,3 +10,15 @@ C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Servic
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.dll
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
 C:\Users\herma\source\repos\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.csproj.CopyComplete
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.deps.json
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.dll
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.pdb
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.dll
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\bin\Debug\netcoreapp3.1\ECommerceTessa.Domain.pdb
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.csprojAssemblyReference.cache
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.AssemblyInfoInputs.cache
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.AssemblyInfo.cs
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.csproj.CopyComplete
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.dll
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Service.Interface\obj\Debug\netcoreapp3.1\ECommerceTessa.Service.Interface.pdb
