@@ -21,7 +21,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetProductById(long id)
         {
@@ -38,7 +38,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getall")]
         public async Task<IActionResult> GetAllProducts()
         {
@@ -59,7 +59,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateProduct(ProductCreationDto dto)
         {
@@ -83,7 +83,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateProduct(ProductCreationDto dto)
         {
@@ -114,7 +114,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteProduct(ProductCreationDto dto)
         {

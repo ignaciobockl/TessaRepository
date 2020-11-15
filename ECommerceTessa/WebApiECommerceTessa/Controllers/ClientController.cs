@@ -22,7 +22,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetClientById(long id)
         {
@@ -39,7 +39,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateClient(ClientCreationDto dto)
         {
@@ -59,7 +59,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateClient(ClientCreationDto dto)
         {
@@ -86,7 +86,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteClient(ClientCreationDto dto)
         {

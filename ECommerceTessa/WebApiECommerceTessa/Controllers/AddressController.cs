@@ -22,7 +22,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetAddressById(long id)
         {
@@ -39,7 +39,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateAddress(AddressCreationDto dto)
         {
@@ -65,7 +65,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateAddress(AddressCreationDto dto)
         {
@@ -98,7 +98,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteAddress(AddressCreationDto dto)
         {
