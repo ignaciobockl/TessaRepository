@@ -31,7 +31,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                 BrandId = dto.BrandId,
                 CategoryId = dto.CategoryId,
                 ErasedState = false,
-                ProductPhotos = dto.ProductPhoto
+                Price1 = dto.Price1
+                //ProductPhotos = dto.ProductPhoto
             };
 
             await _productRepository.Create(product);
@@ -73,14 +74,15 @@ namespace ECommerceTessa.Service.Implementation.Product
                 Id = x.Id,
                 Code = x.Code,
                 Description = x.Description,
-                ProductPhoto = x.ProductPhoto,
+                //ProductPhoto = x.ProductPhoto,
                 DiscountStock = x.DiscountStock,
                 Discontinued = x.Discontinued,
                 ShowBrand = x.ShowBrand,
                 Slow = x.Slow,
                 BrandId = x.BrandId,
                 CategoryId = x.CategoryId,
-                ErasedState = x.ErasedState
+                ErasedState = x.ErasedState,
+                Price1 = x.Price1
             });
         }
 
@@ -106,7 +108,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                     Slow = product.Slow,
                     BrandId = product.BrandId,
                     CategoryId = product.CategoryId,
-                    ProductPhoto = product.ProductPhoto
+                    //ProductPhoto = product.ProductPhoto
+                    Price1 = product.Price1
                 };
             }
         }
@@ -137,7 +140,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                     updateProduct.Slow = dto.Slow;
                     updateProduct.BrandId = dto.BrandId;
                     updateProduct.CategoryId = dto.CategoryId;
-                    updateProduct.ProductPhotos = dto.ProductPhoto;
+                    //updateProduct.ProductPhotos = dto.ProductPhoto;
+                    updateProduct.Price1 = dto.Price1;
 
                     await _productRepository.Update(updateProduct);
                 }

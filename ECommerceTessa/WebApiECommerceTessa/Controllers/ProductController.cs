@@ -68,13 +68,14 @@ namespace WebApiECommerceTessa.Controllers
                 Code = dto.Code,
                 Name = dto.Name,
                 Description = dto.Description,
-                ProductPhoto = dto.ProductPhoto,
+                //ProductPhoto = dto.ProductPhoto,
                 DiscountStock = dto.DiscountStock,
                 Discontinued = dto.Discontinued,
                 ShowBrand = dto.ShowBrand,
                 Slow = dto.Slow,
                 BrandId = dto.BrandId,
-                CategoryId = dto.CategoryId
+                CategoryId = dto.CategoryId,
+                Price1 = dto.Price1
             };
 
             await _productRepository.Create(newProduct);
@@ -94,13 +95,14 @@ namespace WebApiECommerceTessa.Controllers
                     Code = dto.Code,
                     Name = dto.Name,
                     Description = dto.Description,
-                    ProductPhoto = dto.ProductPhoto,
+                    //ProductPhoto = dto.ProductPhoto,
                     DiscountStock = dto.DiscountStock,
                     Discontinued = dto.Discontinued,
                     ShowBrand = dto.ShowBrand,
                     Slow = dto.Slow,
                     BrandId = dto.BrandId,
-                    CategoryId = dto.CategoryId
+                    CategoryId = dto.CategoryId,
+                    Price1 = dto.Price1
                 };
 
                 await _productRepository.Update(dto);
