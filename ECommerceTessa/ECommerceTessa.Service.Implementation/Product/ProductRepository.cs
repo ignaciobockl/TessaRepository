@@ -84,7 +84,7 @@ namespace ECommerceTessa.Service.Implementation.Product
                 CategoryId = x.CategoryId,
                 ErasedState = x.ErasedState,
                 Price1 = x.Price1
-            });
+            }).Where(x=> x.ErasedState == false);
         }
 
         public async Task<ProductDto> GetById(long productId)
