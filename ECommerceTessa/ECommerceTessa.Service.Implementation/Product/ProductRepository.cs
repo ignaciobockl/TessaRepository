@@ -73,6 +73,7 @@ namespace ECommerceTessa.Service.Implementation.Product
             {
                 Id = x.Id,
                 Code = x.Code,
+                Name = x.Name,
                 Description = x.Description,
                 //ProductPhoto = x.ProductPhoto,
                 DiscountStock = x.DiscountStock,
