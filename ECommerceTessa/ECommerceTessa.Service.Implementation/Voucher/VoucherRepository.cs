@@ -79,7 +79,7 @@ namespace ECommerceTessa.Service.Implementation
                 WayToPay = x.WayToPay,
                 UserId = x.UserId,
                 ErasedState = x.ErasedState
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<VoucherDto> GetById(long voucherId)

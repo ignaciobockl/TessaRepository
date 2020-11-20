@@ -66,7 +66,7 @@ namespace ECommerceTessa.Service.Implementation.Brand
                 Id = x.Id,
                 Name = x.Name,
                 ErasedState = x.ErasedState
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<BrandDto> GetById(long brandId)

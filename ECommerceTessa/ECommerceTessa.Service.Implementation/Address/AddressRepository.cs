@@ -83,7 +83,7 @@ namespace ECommerceTessa.Service.Implementation.Address
                 Observation = x.Observation,
                 LocationId = x.LocationId,
                 PersonId = x.PersonId
-            });
+            }).Where(x=> x.ErasedState == false);
         }*/
 
         public async Task<AddressDto> GetById(long addressId)

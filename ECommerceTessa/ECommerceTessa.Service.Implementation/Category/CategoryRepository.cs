@@ -67,7 +67,7 @@ namespace ECommerceTessa.Service.Implementation.Category
                 Id = x.Id,
                 Name = x.Name,
                 ErasedState = x.ErasedState
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<CategoryDto> GetById(long categoryId)

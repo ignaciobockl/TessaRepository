@@ -15,5 +15,7 @@ namespace ECommerceTessa.Service.Interface.Client
         Task Update(ClientDto dto);
 
         Task Delete(ClientDto dto);
+
+        Task<IEnumerable<ClientDto>> GetAll();
     }
 }

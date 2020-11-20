@@ -38,6 +38,28 @@ namespace WebApiECommerceTessa.Controllers
             }
         }
 
+
+        [HttpGet]
+        [EnableCors("_myPolicy")]
+        [Route("getall")]
+        public async Task<IActionResult> GetAllClients()
+        {
+            try
+            {
+                var allClient = await _clientRepository.GetAll();
+
+                return Ok(allClient);
+            }
+            catch (System.ArgumentNullException ex)
+            {
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+
         [HttpPost]
         [EnableCors("_myPolicy")]
         [Route("create")]
@@ -50,7 +72,8 @@ namespace WebApiECommerceTessa.Controllers
                 Dni = dto.Dni,
                 Cuil = dto.Cuil,
                 CellPhone = dto.CellPhone,
-                BirthDate = dto.BirthDate
+                BirthDate = dto.BirthDate,
+                Email = dto.Email
             };
 
             await _clientRepository.Create(newClient);
@@ -72,7 +95,8 @@ namespace WebApiECommerceTessa.Controllers
                     Dni = dto.Dni,
                     Cuil = dto.Cuil,
                     CellPhone = dto.CellPhone,
-                    BirthDate = dto.BirthDate
+                    BirthDate = dto.BirthDate,
+                    Email = dto.Email
                 };
 
                 await _clientRepository.Update(dto);

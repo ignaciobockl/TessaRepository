@@ -63,6 +63,24 @@ namespace ECommerceTessa.Service.Implementation.Client
             }
         }
 
+        public async Task<IEnumerable<ClientDto>> GetAll()
+        {
+            var allClient = await _clientRepository.GetAll();
+
+            return allClient.Select(x=>new ClientDto
+            {
+                Id = x.Id,
+                Name = x.Name,
+                LastName = x.LastName,
+                Dni = x.Dni,
+                Cuil = x.Cuil,
+                CellPhone = x.CellPhone,
+                Email = x.Email,
+                BirthDate = x.BirthDate
+            }).Where(x => x.ErasedState == false);
+
+        }
+
         public async Task<ClientDto> GetById(long clientId)
         {
             var client = await _clientRepository.GetById(clientId);

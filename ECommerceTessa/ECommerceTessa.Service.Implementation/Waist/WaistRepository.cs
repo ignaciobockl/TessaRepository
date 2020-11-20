@@ -68,7 +68,7 @@ namespace ECommerceTessa.Service.Implementation.Waist
                 Description = x.Description,
                 ColourId = x.ColourId,
                 ErasedState = x.ErasedState
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<WaistDto> GetById(long waistId)
