@@ -66,7 +66,7 @@ namespace ECommerceTessa.Service.Implementation.Location
                 Description = x.Description,
                 ErasedState = x.ErasedState,
                 ProvinceId = x.ProvinceId
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<LocationDto> GetById(long locationId)

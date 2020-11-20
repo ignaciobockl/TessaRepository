@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\herma\\.nuget\\packages\\": {},
+    "C:\\Users\\Nacho\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\ECommerceTessa.Application.Connection.csproj",
+      "projectUniqueName": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\ECommerceTessa.Application.Connection.csproj",
       "projectName": "ECommerceTessa.Application.Connection",
-      "projectPath": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\ECommerceTessa.Application.Connection.csproj",
-      "packagesPath": "C:\\Users\\herma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\herma\\source\\repos\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\obj\\",
+      "projectPath": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\ECommerceTessa.Application.Connection.csproj",
+      "packagesPath": "C:\\Users\\Nacho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nacho\\Source\\Repos\\ignaciobockl\\TessaRepository\\ECommerceTessa\\ECommerceTessa.Application.Connection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\herma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nacho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

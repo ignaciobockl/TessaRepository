@@ -21,7 +21,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetStockById(long id)
         {
@@ -38,7 +38,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateStock(StockCreationDto dto)
         {
@@ -53,7 +53,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateStock(StockCreationDto dto)
         {
@@ -75,7 +75,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteStock(StockCreationDto dto)
         {

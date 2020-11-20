@@ -72,7 +72,7 @@ namespace ECommerceTessa.Service.Implementation.Movement
                 Description = x.Description,
                 VoucherId = x.VoucherId,
                 ErasedState = x.ErasedState
-            });
+            }).Where(x => x.ErasedState == false);
         }
 
         public async Task<MovementDto> GetById(long movementId)

@@ -12,6 +12,7 @@ using ECommerceTessa.Service.Implementation.Location;
 using ECommerceTessa.Service.Implementation.Movement;
 using ECommerceTessa.Service.Implementation.Person;
 using ECommerceTessa.Service.Implementation.Price;
+using ECommerceTessa.Service.Implementation.Product;
 using ECommerceTessa.Service.Implementation.Province;
 using ECommerceTessa.Service.Implementation.User;
 using ECommerceTessa.Service.Implementation.Waist;
@@ -24,6 +25,7 @@ using ECommerceTessa.Service.Interface.Location;
 using ECommerceTessa.Service.Interface.Movement;
 using ECommerceTessa.Service.Interface.Person;
 using ECommerceTessa.Service.Interface.Price;
+using ECommerceTessa.Service.Interface.Product;
 using ECommerceTessa.Service.Interface.Province;
 using ECommerceTessa.Service.Interface.User;
 using ECommerceTessa.Service.Interface.Voucher;
@@ -63,6 +65,9 @@ namespace ECommerceTessa.Application.IoC
 
             //Price
             services.AddTransient<IPriceRepository, PriceRepository>();
+
+            //Product
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             //Province
             services.AddTransient<IProvinceRepository, ProvinceRepository>();

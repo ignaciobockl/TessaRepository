@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using ECommerceTessa.Domain.Entities;
+using ECommerceTessa.Domain.Entities.Cloudinary;
 using ECommerceTessa.Domain.MetaData;
 using static ECommerceTessa.Application.Connection.ConnectionSqlServer;
 
@@ -147,6 +148,16 @@ namespace ECommerceTessa.Infraestructure
                 .HasMany(x => x.Colour)
                 .WithOne(y => y.Product);
 
+            modelBuilder.Entity<Product>()
+                .HasMany(x => x.ProductPhotos)
+                .WithOne(y => y.Product);
+
+            //Product Photo
+            modelBuilder.Entity<ProductPhoto>()
+                .HasOne(x => x.Product)
+                .WithMany(y => y.ProductPhotos)
+                .HasForeignKey(p => p.ProductId);
+
             //Province
             modelBuilder.Entity<Province>()
                 .HasMany(x => x.Locations)
@@ -212,6 +223,8 @@ namespace ECommerceTessa.Infraestructure
 
             modelBuilder.ApplyConfiguration<Product>(new ProductMetaData());
 
+            modelBuilder.ApplyConfiguration<ProductPhoto>(new ProductPhotoMetaData());
+
             modelBuilder.ApplyConfiguration<Province>(new ProvinceMetaData());
 
             modelBuilder.ApplyConfiguration<Stock>(new StockMetaData());
@@ -223,6 +236,84 @@ namespace ECommerceTessa.Infraestructure
             modelBuilder.ApplyConfiguration<Waist>(new WaistMetaData());
 
             base.OnModelCreating(modelBuilder);
+
+
+            //Seed Province
+            modelBuilder.Entity<Province>().HasData(
+                new Province() { Id = 1, Description = @"Jujuy", ErasedState = false},
+                new Province() { Id = 2, Description = @"Salta", ErasedState = false},
+                new Province() { Id = 3, Description = @"Formosa", ErasedState = false },
+                new Province() { Id = 4, Description = @"Chaco", ErasedState = false },
+                new Province() { Id = 5, Description = @"Catamarca", ErasedState = false },
+                new Province() { Id = 6, Description = @"Tucuman", ErasedState = false },
+                new Province() { Id = 7, Description = @"Santiago del Estero", ErasedState = false },
+                new Province() { Id = 8, Description = @"Corrientes", ErasedState = false },
+                new Province() { Id = 9, Description = @"Misiones", ErasedState = false },
+                new Province() { Id = 10, Description = @"San Juan", ErasedState = false },
+                new Province() { Id = 11, Description = @"La Rioja", ErasedState = false },
+                new Province() { Id = 12, Description = @"Cordoba", ErasedState = false },
+                new Province() { Id = 13, Description = @"Santa Fe", ErasedState = false },
+                new Province() { Id = 14, Description = @"Mendoza", ErasedState = false },
+                new Province() { Id = 15, Description = @"San Luis", ErasedState = false },
+                new Province() { Id = 16, Description = @"Neuquen", ErasedState = false },
+                new Province() { Id = 17, Description = @"La Pampa", ErasedState = false },
+                new Province() { Id = 18, Description = @"Buenos Aires", ErasedState = false },
+                new Province() { Id = 19, Description = @"Rio Negro", ErasedState = false },
+                new Province() { Id = 20, Description = @"Chubut", ErasedState = false },
+                new Province() { Id = 21, Description = @"Santa Cruz", ErasedState = false },
+                new Province() { Id = 22, Description = @"Tierra del Fuego", ErasedState = false },
+                new Province() { Id = 23, Description = @"Entre Rios", ErasedState = false }
+            );
+
+            //Seed Location
+            modelBuilder.Entity<Location>().HasData(
+                new Location() { Id = 1, Description = @"San Salvador de Jujuy", ProvinceId = 1, ErasedState = false},
+                new Location() { Id = 2, Description = @"Humahuaca", ProvinceId = 1, ErasedState = false },
+                new Location() { Id = 3, Description = @"Salta", ProvinceId = 2, ErasedState = false },
+                new Location() { Id = 4, Description = @"Rosario de la Frontera", ProvinceId = 2, ErasedState = false },
+                new Location() { Id = 5, Description = @"Formosa", ProvinceId = 3, ErasedState = false },
+                new Location() { Id = 6, Description = @"Bermejo", ProvinceId = 3, ErasedState = false },
+                new Location() { Id = 7, Description = @"Resistencia", ProvinceId = 4, ErasedState = false },
+                new Location() { Id = 8, Description = @"Almirante Brown", ProvinceId = 4, ErasedState = false },
+                new Location() { Id = 9, Description = @"San Fernando del Valle de Catamarca", ProvinceId = 5, ErasedState = false },
+                new Location() { Id = 10, Description = @"Andalgala", ProvinceId = 5, ErasedState = false },
+                new Location() { Id = 11, Description = @"San Miguel de Tucuman", ProvinceId = 6, ErasedState = false },
+                new Location() { Id = 12, Description = @"Yerba Buena", ProvinceId = 6, ErasedState = false },
+                new Location() { Id = 13, Description = @"Santiago del Estero", ProvinceId = 7, ErasedState = false },
+                new Location() { Id = 14, Description = @"La Banda", ProvinceId = 7, ErasedState = false },
+                new Location() { Id = 15, Description = @"Corrientes", ProvinceId = 8, ErasedState = false },
+                new Location() { Id = 16, Description = @"Bella Vista", ProvinceId = 8, ErasedState = false },
+                new Location() { Id = 17, Description = @"Posadas", ProvinceId = 9, ErasedState = false },
+                new Location() { Id = 18, Description = @"Iguazu", ProvinceId = 9, ErasedState = false },
+                new Location() { Id = 19, Description = @"San Juan", ProvinceId = 10, ErasedState = false },
+                new Location() { Id = 20, Description = @"Valle Fertil", ProvinceId = 10, ErasedState = false },
+                new Location() { Id = 21, Description = @"La Rioja", ProvinceId = 11, ErasedState = false },
+                new Location() { Id = 22, Description = @"Arauco", ProvinceId = 11, ErasedState = false },
+                new Location() { Id = 23, Description = @"Cordoba", ProvinceId = 12, ErasedState = false },
+                new Location() { Id = 24, Description = @"Cruz del Eje", ProvinceId = 12, ErasedState = false },
+                new Location() { Id = 25, Description = @"Santa Fe", ProvinceId = 13, ErasedState = false },
+                new Location() { Id = 26, Description = @"Santo Tome", ProvinceId = 13, ErasedState = false },
+                new Location() { Id = 27, Description = @"Mendoza", ProvinceId = 14, ErasedState = false },
+                new Location() { Id = 28, Description = @"Uspallata", ProvinceId = 14, ErasedState = false },
+                new Location() { Id = 29, Description = @"San Luis", ProvinceId = 15, ErasedState = false },
+                new Location() { Id = 30, Description = @"Chacabuco", ProvinceId = 15, ErasedState = false },
+                new Location() { Id = 31, Description = @"Neuquen", ProvinceId = 16, ErasedState = false },
+                new Location() { Id = 32, Description = @"Los Lagos", ProvinceId = 16, ErasedState = false },
+                new Location() { Id = 33, Description = @"Santa Rosa", ProvinceId = 17, ErasedState = false },
+                new Location() { Id = 34, Description = @"Trenel", ProvinceId = 17, ErasedState = false },
+                new Location() { Id = 35, Description = @"CABA", ProvinceId = 18, ErasedState = false },
+                new Location() { Id = 36, Description = @"La Plata", ProvinceId = 18, ErasedState = false },
+                new Location() { Id = 37, Description = @"Viedma", ProvinceId = 19, ErasedState = false },
+                new Location() { Id = 38, Description = @"Las Grutas", ProvinceId = 19, ErasedState = false },
+                new Location() { Id = 39, Description = @"Rawson", ProvinceId = 20, ErasedState = false },
+                new Location() { Id = 40, Description = @"Sarmiento", ProvinceId = 20, ErasedState = false },
+                new Location() { Id = 41, Description = @"Rio Gallegos", ProvinceId = 21, ErasedState = false },
+                new Location() { Id = 42, Description = @"Rio Chico", ProvinceId = 21, ErasedState = false },
+                new Location() { Id = 43, Description = @"Usuahia", ProvinceId = 2, ErasedState = false },
+                new Location() { Id = 44, Description = @"Rio Grande", ProvinceId = 2, ErasedState = false },
+                new Location() { Id = 45, Description = @"Parana", ProvinceId = 23, ErasedState = false },
+                new Location() { Id = 46, Description = @"Concordia", ProvinceId = 23, ErasedState = false }
+            );
         }
 
         public DbSet<Address> Addresses { get; set; }
@@ -235,6 +326,7 @@ namespace ECommerceTessa.Infraestructure
         public DbSet<Person> Persons { get; set; }
         public DbSet<Price> Prices { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductPhoto> ProductPhotos { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<User> Users { get; set; }

@@ -22,7 +22,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetLocationById(long id)
         {
@@ -39,7 +39,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getall")]
         public async Task<IActionResult> GetAllLocations()
         {
@@ -60,7 +60,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateLocation(LocationCreationDto dto)
         {
@@ -76,7 +76,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateLocation(LocationCreationDto dto)
         {
@@ -99,7 +99,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteLocation(LocationCreationDto dto)
         {

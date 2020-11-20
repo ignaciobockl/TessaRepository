@@ -22,7 +22,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpGet]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("getbyid")]
         public async Task<IActionResult> GetClientById(long id)
         {
@@ -38,8 +38,30 @@ namespace WebApiECommerceTessa.Controllers
             }
         }
 
+
+        [HttpGet]
+        [EnableCors("_myPolicy")]
+        [Route("getall")]
+        public async Task<IActionResult> GetAllClients()
+        {
+            try
+            {
+                var allClient = await _clientRepository.GetAll();
+
+                return Ok(allClient);
+            }
+            catch (System.ArgumentNullException ex)
+            {
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+
         [HttpPost]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("create")]
         public async Task<IActionResult> CreateClient(ClientCreationDto dto)
         {
@@ -50,7 +72,8 @@ namespace WebApiECommerceTessa.Controllers
                 Dni = dto.Dni,
                 Cuil = dto.Cuil,
                 CellPhone = dto.CellPhone,
-                BirthDate = dto.BirthDate
+                BirthDate = dto.BirthDate,
+                Email = dto.Email
             };
 
             await _clientRepository.Create(newClient);
@@ -59,7 +82,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpPut]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("update")]
         public async Task<IActionResult> UpdateClient(ClientCreationDto dto)
         {
@@ -72,7 +95,8 @@ namespace WebApiECommerceTessa.Controllers
                     Dni = dto.Dni,
                     Cuil = dto.Cuil,
                     CellPhone = dto.CellPhone,
-                    BirthDate = dto.BirthDate
+                    BirthDate = dto.BirthDate,
+                    Email = dto.Email
                 };
 
                 await _clientRepository.Update(dto);
@@ -86,7 +110,7 @@ namespace WebApiECommerceTessa.Controllers
         }
 
         [HttpDelete]
-        [EnableCors("_myPoliticy")]
+        [EnableCors("_myPolicy")]
         [Route("delete")]
         public async Task<IActionResult> DeleteClient(ClientCreationDto dto)
         {

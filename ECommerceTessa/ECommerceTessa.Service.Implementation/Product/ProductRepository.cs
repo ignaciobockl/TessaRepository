@@ -30,7 +30,9 @@ namespace ECommerceTessa.Service.Implementation.Product
                 Slow = dto.Slow,
                 BrandId = dto.BrandId,
                 CategoryId = dto.CategoryId,
-                ErasedState = false
+                ErasedState = false,
+                Price1 = dto.Price1
+                //ProductPhotos = dto.ProductPhoto
             };
 
             await _productRepository.Create(product);
@@ -63,6 +65,28 @@ namespace ECommerceTessa.Service.Implementation.Product
             }
         }
 
+        public async Task<IEnumerable<ProductDto>> GetAll()
+        {
+            var allProduct = await _productRepository.GetAll();
+
+            return allProduct.Select(x => new ProductDto
+            {
+                Id = x.Id,
+                Code = x.Code,
+                Name = x.Name,
+                Description = x.Description,
+                //ProductPhoto = x.ProductPhoto,
+                DiscountStock = x.DiscountStock,
+                Discontinued = x.Discontinued,
+                ShowBrand = x.ShowBrand,
+                Slow = x.Slow,
+                BrandId = x.BrandId,
+                CategoryId = x.CategoryId,
+                ErasedState = x.ErasedState,
+                Price1 = x.Price1
+            }).Where(x=> x.ErasedState == false);
+        }
+
         public async Task<ProductDto> GetById(long productId)
         {
             var product = await _productRepository.GetById(productId);
@@ -84,7 +108,9 @@ namespace ECommerceTessa.Service.Implementation.Product
                     ShowBrand = product.ShowBrand,
                     Slow = product.Slow,
                     BrandId = product.BrandId,
-                    CategoryId = product.CategoryId
+                    CategoryId = product.CategoryId,
+                    //ProductPhoto = product.ProductPhoto
+                    Price1 = product.Price1
                 };
             }
         }
@@ -115,6 +141,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                     updateProduct.Slow = dto.Slow;
                     updateProduct.BrandId = dto.BrandId;
                     updateProduct.CategoryId = dto.CategoryId;
+                    //updateProduct.ProductPhotos = dto.ProductPhoto;
+                    updateProduct.Price1 = dto.Price1;
 
                     await _productRepository.Update(updateProduct);
                 }

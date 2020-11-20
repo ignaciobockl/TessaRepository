@@ -126,6 +126,31 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Cloudinary.ProductPhoto", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ErasedState")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductPhotos");
+                });
+
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Colour", b =>
                 {
                     b.Property<long>("Id")
@@ -174,6 +199,330 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.HasIndex("ProvinceId");
 
                     b.ToTable("Locations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Description = "San Salvador De Jujuy",
+                            ErasedState = false,
+                            ProvinceId = 1L
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Description = "Humahuaca",
+                            ErasedState = false,
+                            ProvinceId = 1L
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Description = "Salta",
+                            ErasedState = false,
+                            ProvinceId = 2L
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            Description = "Rosario De La Frontera",
+                            ErasedState = false,
+                            ProvinceId = 2L
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            Description = "Formosa",
+                            ErasedState = false,
+                            ProvinceId = 3L
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            Description = "Bermejo",
+                            ErasedState = false,
+                            ProvinceId = 3L
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            Description = "Resistencia",
+                            ErasedState = false,
+                            ProvinceId = 4L
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            Description = "Almirante Brown",
+                            ErasedState = false,
+                            ProvinceId = 4L
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            Description = "San Fernando Del Valle De Catamarca",
+                            ErasedState = false,
+                            ProvinceId = 5L
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            Description = "Andalgala",
+                            ErasedState = false,
+                            ProvinceId = 5L
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            Description = "San Miguel De Tucuman",
+                            ErasedState = false,
+                            ProvinceId = 6L
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            Description = "Yerba Buena",
+                            ErasedState = false,
+                            ProvinceId = 6L
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            Description = "Santiago Del Estero",
+                            ErasedState = false,
+                            ProvinceId = 7L
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            Description = "La Banda",
+                            ErasedState = false,
+                            ProvinceId = 7L
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            Description = "Corrientes",
+                            ErasedState = false,
+                            ProvinceId = 8L
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            Description = "Bella Vista",
+                            ErasedState = false,
+                            ProvinceId = 8L
+                        },
+                        new
+                        {
+                            Id = 17L,
+                            Description = "Posadas",
+                            ErasedState = false,
+                            ProvinceId = 9L
+                        },
+                        new
+                        {
+                            Id = 18L,
+                            Description = "Iguazu",
+                            ErasedState = false,
+                            ProvinceId = 9L
+                        },
+                        new
+                        {
+                            Id = 19L,
+                            Description = "San Juan",
+                            ErasedState = false,
+                            ProvinceId = 10L
+                        },
+                        new
+                        {
+                            Id = 20L,
+                            Description = "Valle Fertil",
+                            ErasedState = false,
+                            ProvinceId = 10L
+                        },
+                        new
+                        {
+                            Id = 21L,
+                            Description = "La Rioja",
+                            ErasedState = false,
+                            ProvinceId = 11L
+                        },
+                        new
+                        {
+                            Id = 22L,
+                            Description = "Arauco",
+                            ErasedState = false,
+                            ProvinceId = 11L
+                        },
+                        new
+                        {
+                            Id = 23L,
+                            Description = "Cordoba",
+                            ErasedState = false,
+                            ProvinceId = 12L
+                        },
+                        new
+                        {
+                            Id = 24L,
+                            Description = "Cruz Del Eje",
+                            ErasedState = false,
+                            ProvinceId = 12L
+                        },
+                        new
+                        {
+                            Id = 25L,
+                            Description = "Santa Fe",
+                            ErasedState = false,
+                            ProvinceId = 13L
+                        },
+                        new
+                        {
+                            Id = 26L,
+                            Description = "Santo Tome",
+                            ErasedState = false,
+                            ProvinceId = 13L
+                        },
+                        new
+                        {
+                            Id = 27L,
+                            Description = "Mendoza",
+                            ErasedState = false,
+                            ProvinceId = 14L
+                        },
+                        new
+                        {
+                            Id = 28L,
+                            Description = "Uspallata",
+                            ErasedState = false,
+                            ProvinceId = 14L
+                        },
+                        new
+                        {
+                            Id = 29L,
+                            Description = "San Luis",
+                            ErasedState = false,
+                            ProvinceId = 15L
+                        },
+                        new
+                        {
+                            Id = 30L,
+                            Description = "Chacabuco",
+                            ErasedState = false,
+                            ProvinceId = 15L
+                        },
+                        new
+                        {
+                            Id = 31L,
+                            Description = "Neuquen",
+                            ErasedState = false,
+                            ProvinceId = 16L
+                        },
+                        new
+                        {
+                            Id = 32L,
+                            Description = "Los Lagos",
+                            ErasedState = false,
+                            ProvinceId = 16L
+                        },
+                        new
+                        {
+                            Id = 33L,
+                            Description = "Santa Rosa",
+                            ErasedState = false,
+                            ProvinceId = 17L
+                        },
+                        new
+                        {
+                            Id = 34L,
+                            Description = "Trenel",
+                            ErasedState = false,
+                            ProvinceId = 17L
+                        },
+                        new
+                        {
+                            Id = 35L,
+                            Description = "Caba",
+                            ErasedState = false,
+                            ProvinceId = 18L
+                        },
+                        new
+                        {
+                            Id = 36L,
+                            Description = "La Plata",
+                            ErasedState = false,
+                            ProvinceId = 18L
+                        },
+                        new
+                        {
+                            Id = 37L,
+                            Description = "Viedma",
+                            ErasedState = false,
+                            ProvinceId = 19L
+                        },
+                        new
+                        {
+                            Id = 38L,
+                            Description = "Las Grutas",
+                            ErasedState = false,
+                            ProvinceId = 19L
+                        },
+                        new
+                        {
+                            Id = 39L,
+                            Description = "Rawson",
+                            ErasedState = false,
+                            ProvinceId = 20L
+                        },
+                        new
+                        {
+                            Id = 40L,
+                            Description = "Sarmiento",
+                            ErasedState = false,
+                            ProvinceId = 20L
+                        },
+                        new
+                        {
+                            Id = 41L,
+                            Description = "Rio Gallegos",
+                            ErasedState = false,
+                            ProvinceId = 21L
+                        },
+                        new
+                        {
+                            Id = 42L,
+                            Description = "Rio Chico",
+                            ErasedState = false,
+                            ProvinceId = 21L
+                        },
+                        new
+                        {
+                            Id = 43L,
+                            Description = "Usuahia",
+                            ErasedState = false,
+                            ProvinceId = 2L
+                        },
+                        new
+                        {
+                            Id = 44L,
+                            Description = "Rio Grande",
+                            ErasedState = false,
+                            ProvinceId = 2L
+                        },
+                        new
+                        {
+                            Id = 45L,
+                            Description = "Parana",
+                            ErasedState = false,
+                            ProvinceId = 23L
+                        },
+                        new
+                        {
+                            Id = 46L,
+                            Description = "Concordia",
+                            ErasedState = false,
+                            ProvinceId = 23L
+                        });
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Movement", b =>
@@ -315,6 +664,9 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
+                    b.Property<decimal>("Price1")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.Property<bool>("ShowBrand")
                         .HasColumnType("bit");
 
@@ -348,6 +700,146 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Provinces");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Description = "Jujuy",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Description = "Salta",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Description = "Formosa",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            Description = "Chaco",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            Description = "Catamarca",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            Description = "Tucuman",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            Description = "Santiago Del Estero",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            Description = "Corrientes",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            Description = "Misiones",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            Description = "San Juan",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            Description = "La Rioja",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            Description = "Cordoba",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            Description = "Santa Fe",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            Description = "Mendoza",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            Description = "San Luis",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            Description = "Neuquen",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 17L,
+                            Description = "La Pampa",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 18L,
+                            Description = "Buenos Aires",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 19L,
+                            Description = "Rio Negro",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 20L,
+                            Description = "Chubut",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 21L,
+                            Description = "Santa Cruz",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 22L,
+                            Description = "Tierra Del Fuego",
+                            ErasedState = false
+                        },
+                        new
+                        {
+                            Id = 23L,
+                            Description = "Entre Rios",
+                            ErasedState = false
+                        });
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Stock", b =>
@@ -485,6 +977,15 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.HasOne("ECommerceTessa.Domain.Entities.Person", "Person")
                         .WithMany("Addresses")
                         .HasForeignKey("PersonId");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Cloudinary.ProductPhoto", b =>
+                {
+                    b.HasOne("ECommerceTessa.Domain.Entities.Product", "Product")
+                        .WithMany("ProductPhotos")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Colour", b =>

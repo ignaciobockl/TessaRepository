@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ECommerceTessa.Domain.Entities.Cloudinary;
 using ECommerceTessa.Service.Interface.Base;
 
 namespace ECommerceTessa.Service.Interface.Product.DTOs
@@ -13,7 +14,7 @@ namespace ECommerceTessa.Service.Interface.Product.DTOs
 
         public string Description { get; set; }
 
-        //public string Photo { get; set; }
+        //public List<ProductPhoto> ProductPhoto { get; set; }
 
         public bool DiscountStock { get; set; }
 
@@ -22,6 +23,8 @@ namespace ECommerceTessa.Service.Interface.Product.DTOs
         public bool ShowBrand { get; set; }
 
         public bool Slow { get; set; }
+
+        public decimal Price1 { get; set; }
 
         public long BrandId { get; set; }
 
