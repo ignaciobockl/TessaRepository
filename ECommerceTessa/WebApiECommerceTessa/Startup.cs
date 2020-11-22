@@ -30,12 +30,22 @@ namespace WebApiECommerceTessa
         public void ConfigureServices(IServiceCollection services)
         {
             //CONFIGURATION CORS
+            /*services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+
+                        builder.WithOrigins("https://localhost:44365");
+                    });
+            });*/
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("https://localhost:44365");
+                        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                     });
             });
 
