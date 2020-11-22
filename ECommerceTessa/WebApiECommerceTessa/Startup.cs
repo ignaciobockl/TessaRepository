@@ -40,6 +40,7 @@ namespace WebApiECommerceTessa
                     });
             });*/
 
+            //CONFIGURATION CORS GENERIC
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
