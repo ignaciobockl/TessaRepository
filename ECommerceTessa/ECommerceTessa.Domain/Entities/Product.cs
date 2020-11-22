@@ -34,6 +34,8 @@ namespace ECommerceTessa.Domain.Entities
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price1 { get; set; }
 
+        public int Stock { get; set; }
+
         //NAVIGATION PROPERTIES
         public virtual ICollection<Colour> Colour { get; set; }
         public virtual Price Price {get; set;}

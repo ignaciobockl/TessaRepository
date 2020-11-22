@@ -31,7 +31,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                 BrandId = dto.BrandId,
                 CategoryId = dto.CategoryId,
                 ErasedState = false,
-                Price1 = dto.Price1
+                Price1 = dto.Price1,
+                Stock = dto.Stock
                 //ProductPhotos = dto.ProductPhoto
             };
 
@@ -83,7 +84,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                 BrandId = x.BrandId,
                 CategoryId = x.CategoryId,
                 ErasedState = x.ErasedState,
-                Price1 = x.Price1
+                Price1 = x.Price1,
+                Stock = x.Stock
             }).Where(x=> x.ErasedState == false);
         }
 
@@ -110,7 +112,8 @@ namespace ECommerceTessa.Service.Implementation.Product
                     BrandId = product.BrandId,
                     CategoryId = product.CategoryId,
                     //ProductPhoto = product.ProductPhoto
-                    Price1 = product.Price1
+                    Price1 = product.Price1,
+                    Stock = product.Stock
                 };
             }
         }
@@ -143,6 +146,7 @@ namespace ECommerceTessa.Service.Implementation.Product
                     updateProduct.CategoryId = dto.CategoryId;
                     //updateProduct.ProductPhotos = dto.ProductPhoto;
                     updateProduct.Price1 = dto.Price1;
+                    updateProduct.Stock = dto.Stock;
 
                     await _productRepository.Update(updateProduct);
                 }

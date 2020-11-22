@@ -75,7 +75,8 @@ namespace WebApiECommerceTessa.Controllers
                 Slow = dto.Slow,
                 BrandId = dto.BrandId,
                 CategoryId = dto.CategoryId,
-                Price1 = dto.Price1
+                Price1 = dto.Price1,
+                Stock = dto.Stock
             };
 
             await _productRepository.Create(newProduct);
@@ -102,7 +103,8 @@ namespace WebApiECommerceTessa.Controllers
                     Slow = dto.Slow,
                     BrandId = dto.BrandId,
                     CategoryId = dto.CategoryId,
-                    Price1 = dto.Price1
+                    Price1 = dto.Price1,
+                    Stock = dto.Stock
                 };
 
                 await _productRepository.Update(dto);
