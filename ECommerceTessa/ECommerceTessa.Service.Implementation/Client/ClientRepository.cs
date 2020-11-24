@@ -76,8 +76,9 @@ namespace ECommerceTessa.Service.Implementation.Client
                 Cuil = x.Cuil,
                 CellPhone = x.CellPhone,
                 Email = x.Email,
-                BirthDate = x.BirthDate
-            }).Where(x => x.ErasedState == false);
+                BirthDate = x.BirthDate,
+                ErasedState = x.ErasedState
+            }).Where(x => x.ErasedState == false & x.Dni != 99999999);
 
         }
 
