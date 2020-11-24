@@ -47,6 +47,10 @@ namespace ECommerceTessa.Domain.MetaData
             builder.Property(x => x.Stock1)
                 .HasMaxLength(6)
                 .IsRequired();
+
+            builder.Property(x => x.ImageUrl)
+                .HasMaxLength(500)
+                .IsRequired();
         }
     }
 }

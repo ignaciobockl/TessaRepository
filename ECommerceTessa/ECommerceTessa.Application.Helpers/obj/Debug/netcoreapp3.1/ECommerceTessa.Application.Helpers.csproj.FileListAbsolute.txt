@@ -13,6 +13,6 @@ C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerc
 C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.csprojAssemblyReference.cache
 C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.AssemblyInfoInputs.cache
 C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.AssemblyInfo.cs
-C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.csproj.CoreCompileInputs.cache
 C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.dll
 C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.pdb
+C:\Users\Nacho\Source\Repos\ignaciobockl\TessaRepository\ECommerceTessa\ECommerceTessa.Application.Helpers\obj\Debug\netcoreapp3.1\ECommerceTessa.Application.Helpers.csproj.CoreCompileInputs.cache

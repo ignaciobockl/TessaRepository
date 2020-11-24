@@ -36,6 +36,8 @@ namespace ECommerceTessa.Domain.Entities
 
         public int Stock1 { get; set; }
 
+        public string ImageUrl { get; set; }
+
         //NAVIGATION PROPERTIES
         public virtual ICollection<Colour> Colour { get; set; }
         public virtual Price Price {get; set;}
