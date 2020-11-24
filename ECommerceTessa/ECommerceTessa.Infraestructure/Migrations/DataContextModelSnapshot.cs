@@ -15,67 +15,67 @@ namespace ECommerceTessa.Infraestructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Address", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<string>("Apple")
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<string>("Departament")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
 
                     b.Property<string>("Floor")
-                        .HasColumnType("nvarchar(3)")
-                        .HasMaxLength(3);
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
 
                     b.Property<string>("House")
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<long>("LocationId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Lot")
-                        .HasColumnType("nvarchar(3)")
-                        .HasMaxLength(3);
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
 
                     b.Property<string>("Neighborhood")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Number")
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<string>("Observation")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<long>("PersonId")
                         .HasColumnType("bigint");
 
                     b.Property<int>("PostalCode")
-                        .HasColumnType("int")
-                        .HasMaxLength(6);
+                        .HasMaxLength(6)
+                        .HasColumnType("int");
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -91,19 +91,75 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            ErasedState = false,
+                            Name = "Victoria's Secret"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            ErasedState = false,
+                            Name = "La Perla"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            ErasedState = false,
+                            Name = "Agent Provocateur"
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            ErasedState = false,
+                            Name = "Oysho"
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            ErasedState = false,
+                            Name = "H&M"
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            ErasedState = false,
+                            Name = "E-Lakokette"
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            ErasedState = false,
+                            Name = "Botica Lingerie"
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            ErasedState = false,
+                            Name = "Pleasurements"
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            ErasedState = false,
+                            Name = " Journelle"
+                        });
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Category", b =>
@@ -111,19 +167,51 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(25)")
-                        .HasMaxLength(25);
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            ErasedState = false,
+                            Name = "Bikinis"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            ErasedState = false,
+                            Name = "Conjuntos"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            ErasedState = false,
+                            Name = "Enterizas"
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            ErasedState = false,
+                            Name = "Bodys"
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            ErasedState = false,
+                            Name = "Bombachas"
+                        });
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Cloudinary.ProductPhoto", b =>
@@ -131,7 +219,7 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
@@ -141,8 +229,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -156,15 +244,15 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(25)")
-                        .HasMaxLength(25);
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<long>("ProductId")
                         .HasColumnType("bigint");
@@ -181,12 +269,12 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
@@ -530,7 +618,7 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
@@ -539,8 +627,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
@@ -560,44 +648,44 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
                     b.Property<long>("CellPhone")
-                        .HasColumnType("bigint")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("bigint");
 
                     b.Property<long>("Cuil")
-                        .HasColumnType("bigint")
-                        .HasMaxLength(11);
+                        .HasMaxLength(11)
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Dni")
-                        .HasColumnType("int")
-                        .HasMaxLength(8);
+                        .HasMaxLength(8)
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -633,7 +721,7 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<long>("BrandId")
                         .HasColumnType("bigint");
@@ -643,12 +731,12 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("Discontinued")
                         .HasColumnType("bit");
@@ -661,17 +749,21 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<decimal>("Price1")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("ShowBrand")
                         .HasColumnType("bit");
 
                     b.Property<bool>("Slow")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Stock1")
+                        .HasMaxLength(6)
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -687,12 +779,12 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
@@ -851,8 +943,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasMaxLength(5);
+                        .HasMaxLength(5)
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -864,7 +956,7 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<bool>("Admin")
                         .HasColumnType("bit");
@@ -877,16 +969,16 @@ namespace ECommerceTessa.Infraestructure.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<long>("PersonId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
@@ -900,7 +992,7 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -912,8 +1004,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<int>("Number")
-                        .HasColumnType("int")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
 
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
@@ -939,15 +1031,15 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<long>("ColourId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<bool>("ErasedState")
                         .HasColumnType("bit");
@@ -977,6 +1069,10 @@ namespace ECommerceTessa.Infraestructure.Migrations
                     b.HasOne("ECommerceTessa.Domain.Entities.Person", "Person")
                         .WithMany("Addresses")
                         .HasForeignKey("PersonId");
+
+                    b.Navigation("Location");
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Cloudinary.ProductPhoto", b =>
@@ -986,6 +1082,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Colour", b =>
@@ -995,6 +1093,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Location", b =>
@@ -1004,6 +1104,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ProvinceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Province");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Movement", b =>
@@ -1013,6 +1115,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("VoucherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Voucher");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Price", b =>
@@ -1022,6 +1126,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ECommerceTessa.Domain.Entities.Price", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Product", b =>
@@ -1037,6 +1143,10 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Stock", b =>
@@ -1046,6 +1156,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ECommerceTessa.Domain.Entities.Stock", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Waist");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.User", b =>
@@ -1055,6 +1167,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Voucher", b =>
@@ -1064,6 +1178,8 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ECommerceTessa.Domain.Entities.Waist", b =>
@@ -1073,6 +1189,64 @@ namespace ECommerceTessa.Infraestructure.Migrations
                         .HasForeignKey("ColourId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Colour");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Brand", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Colour", b =>
+                {
+                    b.Navigation("Waists");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Location", b =>
+                {
+                    b.Navigation("Addresses");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Person", b =>
+                {
+                    b.Navigation("Addresses");
+
+                    b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("Colour");
+
+                    b.Navigation("Price");
+
+                    b.Navigation("ProductPhotos");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Province", b =>
+                {
+                    b.Navigation("Locations");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Vouchers");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Voucher", b =>
+                {
+                    b.Navigation("Movements");
+                });
+
+            modelBuilder.Entity("ECommerceTessa.Domain.Entities.Waist", b =>
+                {
+                    b.Navigation("Stock");
                 });
 #pragma warning restore 612, 618
         }

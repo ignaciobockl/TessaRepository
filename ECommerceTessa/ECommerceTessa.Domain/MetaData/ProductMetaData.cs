@@ -40,6 +40,13 @@ namespace ECommerceTessa.Domain.MetaData
 
             builder.Property(x => x.CategoryId)
                 .IsRequired();
+
+            builder.Property(x => x.Price1)
+                .IsRequired();
+
+            builder.Property(x => x.Stock1)
+                .HasMaxLength(6)
+                .IsRequired();
         }
     }
 }

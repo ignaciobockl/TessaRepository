@@ -314,6 +314,29 @@ namespace ECommerceTessa.Infraestructure
                 new Location() { Id = 45, Description = @"Parana", ProvinceId = 23, ErasedState = false },
                 new Location() { Id = 46, Description = @"Concordia", ProvinceId = 23, ErasedState = false }
             );
+
+            //Seed Brand
+            modelBuilder.Entity<Brand>().HasData
+            (
+                new Brand() {Id = 1, Name = @"Victoria's Secret", ErasedState = false},
+                new Brand() { Id = 2, Name = @"La Perla", ErasedState = false },
+                new Brand() { Id = 3, Name = @"Agent Provocateur", ErasedState = false },
+                new Brand() { Id = 4, Name = @"Oysho", ErasedState = false },
+                new Brand() { Id = 5, Name = @"H&M", ErasedState = false },
+                new Brand() { Id = 6, Name = @"E-Lakokette", ErasedState = false },
+                new Brand() { Id = 7, Name = @"Botica Lingerie", ErasedState = false },
+                new Brand() { Id = 8, Name = @"Pleasurements", ErasedState = false },
+                new Brand() { Id = 9, Name = @" Journelle", ErasedState = false }
+            );
+
+            //Seed Category
+            modelBuilder.Entity<Category>().HasData(
+                new Category() {Id = 1, Name = @"Bikinis", ErasedState = false},
+                new Category() { Id = 2, Name = @"Conjuntos", ErasedState = false },
+                new Category() { Id = 3, Name = @"Enterizas", ErasedState = false },
+                new Category() { Id = 4, Name = @"Bodys", ErasedState = false },
+                new Category() { Id = 5, Name = @"Bombachas", ErasedState = false }
+                );
         }
 
         public DbSet<Address> Addresses { get; set; }

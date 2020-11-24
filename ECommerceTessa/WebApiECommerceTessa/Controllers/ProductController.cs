@@ -76,7 +76,7 @@ namespace WebApiECommerceTessa.Controllers
                 BrandId = dto.BrandId,
                 CategoryId = dto.CategoryId,
                 Price1 = dto.Price1,
-                Stock = dto.Stock
+                Stock1 = dto.Stock1
             };
 
             await _productRepository.Create(newProduct);
@@ -104,7 +104,7 @@ namespace WebApiECommerceTessa.Controllers
                     BrandId = dto.BrandId,
                     CategoryId = dto.CategoryId,
                     Price1 = dto.Price1,
-                    Stock = dto.Stock
+                    Stock1 = dto.Stock1
                 };
 
                 await _productRepository.Update(dto);

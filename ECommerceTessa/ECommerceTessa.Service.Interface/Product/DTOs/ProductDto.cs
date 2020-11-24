@@ -30,6 +30,6 @@ namespace ECommerceTessa.Service.Interface.Product.DTOs
 
         public long CategoryId { get; set; }
 
-        public int Stock { get; set; }
+        public int Stock1 { get; set; }
     }
 }
